@@ -1,122 +1,1875 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexaFlow — AI Workflow Automation for High-Growth Teams</title>
-  <meta name="description" content="NexaFlow is a premium AI workflow automation platform that helps revenue and operations teams launch, measure, and optimize critical work in minutes.">
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body><header class="site-header" data-site-header="">
-    <div class="container-wide header-inner">
-      <a class="brand" href="#hero" aria-label="NexaFlow home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" role="img">
-            <path d="M5 12.7C5 8.4 8.4 5 12.7 5H19v6.3c0 4.3-3.4 7.7-7.7 7.7H5v-6.3Z" fill="currentColor" opacity=".92"></path>
-            <path d="M9 14.8 15.8 8M14.8 8h1v1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </span>
-        <span class="brand-name">NexaFlow</span>
-      </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NimbusFlow is a premium SaaS platform that helps high-performing teams automate workflows, unify data, and ship faster with AI-powered operations." />
+  <title>NimbusFlow — AI Operations Platform for Modern SaaS Teams</title>
+  <style>
+    :root {
+      --saas26x9-color-bg: #070a12;
+      --saas26x9-color-bg-2: #0b1020;
+      --saas26x9-color-surface: rgba(255, 255, 255, 0.065);
+      --saas26x9-color-surface-2: rgba(255, 255, 255, 0.1);
+      --saas26x9-color-border: rgba(255, 255, 255, 0.14);
+      --saas26x9-color-border-strong: rgba(255, 255, 255, 0.24);
+      --saas26x9-color-text: #f7f9ff;
+      --saas26x9-color-muted: #aab4ce;
+      --saas26x9-color-muted-2: #7f8ba8;
+      --saas26x9-color-accent: #7c5cff;
+      --saas26x9-color-accent-2: #00d4ff;
+      --saas26x9-color-accent-3: #64ffda;
+      --saas26x9-color-success: #7dffb2;
+      --saas26x9-color-warning: #ffd166;
+      --saas26x9-shadow-soft: 0 24px 90px rgba(0, 0, 0, 0.34);
+      --saas26x9-shadow-glow: 0 0 70px rgba(124, 92, 255, 0.34);
+      --saas26x9-radius-sm: 14px;
+      --saas26x9-radius-md: 22px;
+      --saas26x9-radius-lg: 34px;
+      --saas26x9-max-width: 1180px;
+      --saas26x9-font-main: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --saas26x9-transition: 220ms ease;
+    }
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a class="nav-link" data-nav-link="" href="#features">Features</a>
-        <a class="nav-link" data-nav-link="" href="#benefits">Benefits</a>
-        <a class="nav-link" data-nav-link="" href="#testimonials">Customers</a>
-        <a class="nav-link" data-nav-link="" href="#pricing">Pricing</a>
-        <a class="nav-link" data-nav-link="" href="#faq">FAQ</a>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--saas26x9-color-bg);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--saas26x9-font-main);
+      color: var(--saas26x9-color-text);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(124, 92, 255, 0.22), transparent 34rem),
+        radial-gradient(circle at 84% 10%, rgba(0, 212, 255, 0.16), transparent 32rem),
+        linear-gradient(180deg, var(--saas26x9-color-bg), var(--saas26x9-color-bg-2) 42%, #070a12);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body.saas26x9-body-lock {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: rgba(124, 92, 255, 0.45);
+      color: #ffffff;
+    }
+
+    .saas26x9-skipLink {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+      transform: translateY(-180%);
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #070a12;
+      font-weight: 800;
+      transition: transform var(--saas26x9-transition);
+    }
+
+    .saas26x9-skipLink:focus {
+      transform: translateY(0);
+      outline: 3px solid var(--saas26x9-color-accent-2);
+      outline-offset: 3px;
+    }
+
+    .saas26x9-pageShell {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .saas26x9-pageShell::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 82%);
+      opacity: 0.45;
+      z-index: -2;
+    }
+
+    .saas26x9-pageShell::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.1), transparent 34rem);
+      z-index: -1;
+    }
+
+    .saas26x9-layoutBand {
+      width: min(100% - 2rem, var(--saas26x9-max-width));
+      margin-inline: auto;
+    }
+
+    .saas26x9-siteHeader {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(7, 10, 18, 0.82), rgba(7, 10, 18, 0.48));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .saas26x9-navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      width: min(100% - 2rem, var(--saas26x9-max-width));
+      margin-inline: auto;
+      min-height: 3.25rem;
+    }
+
+    .saas26x9-brandMark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 1.12rem;
+    }
+
+    .saas26x9-brandGlyph {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.85rem;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.95), transparent 0.32rem),
+        linear-gradient(135deg, var(--saas26x9-color-accent), var(--saas26x9-color-accent-2));
+      box-shadow: 0 0 34px rgba(124, 92, 255, 0.5);
+    }
+
+    .saas26x9-brandGlyph::after {
+      content: "";
+      width: 0.86rem;
+      height: 0.86rem;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.88);
+    }
+
+    .saas26x9-navLinks {
+      display: none;
+      align-items: center;
+      gap: 1.35rem;
+      color: var(--saas26x9-color-muted);
+      font-size: 0.94rem;
+      font-weight: 650;
+    }
+
+    .saas26x9-navLink {
+      position: relative;
+      transition: color var(--saas26x9-transition);
+    }
+
+    .saas26x9-navLink::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.45rem;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--saas26x9-color-accent), var(--saas26x9-color-accent-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--saas26x9-transition);
+    }
+
+    .saas26x9-navLink:hover,
+    .saas26x9-navLink:focus-visible {
+      color: var(--saas26x9-color-text);
+    }
+
+    .saas26x9-navLink:hover::after,
+    .saas26x9-navLink:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .saas26x9-navActions {
+      display: none;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .saas26x9-menuButton {
+      display: inline-grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: 999px;
+      color: var(--saas26x9-color-text);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .saas26x9-menuIcon {
+      position: relative;
+      width: 1.05rem;
+      height: 0.75rem;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .saas26x9-menuIcon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      border-top: 2px solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    .saas26x9-mobilePanel {
+      display: none;
+      width: min(100% - 2rem, var(--saas26x9-max-width));
+      margin: 0.75rem auto 0;
+      padding: 1rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background: rgba(10, 15, 30, 0.96);
+      box-shadow: var(--saas26x9-shadow-soft);
+    }
+
+    .saas26x9-mobilePanel.saas26x9-mobilePanel--shown {
+      display: grid;
+      gap: 0.5rem;
+      animation: saas26x9-panelIn 180ms ease both;
+    }
+
+    .saas26x9-mobileLink {
+      padding: 0.85rem 0.9rem;
+      border-radius: 0.9rem;
+      color: var(--saas26x9-color-muted);
+      font-weight: 750;
+    }
+
+    .saas26x9-mobileLink:hover,
+    .saas26x9-mobileLink:focus-visible {
+      background: rgba(255, 255, 255, 0.075);
+      color: var(--saas26x9-color-text);
+    }
+
+    .saas26x9-ctaButton,
+    .saas26x9-ghostButton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 2.8rem;
+      padding: 0.78rem 1.05rem;
+      border-radius: 999px;
+      font-weight: 850;
+      letter-spacing: -0.015em;
+      transition:
+        transform var(--saas26x9-transition),
+        border-color var(--saas26x9-transition),
+        background var(--saas26x9-transition),
+        box-shadow var(--saas26x9-transition);
+    }
+
+    .saas26x9-ctaButton {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent),
+        linear-gradient(135deg, var(--saas26x9-color-accent), #5c7cff 45%, var(--saas26x9-color-accent-2));
+      box-shadow: 0 14px 34px rgba(124, 92, 255, 0.32);
+    }
+
+    .saas26x9-ghostButton {
+      border: 1px solid var(--saas26x9-color-border);
+      color: var(--saas26x9-color-text);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .saas26x9-ctaButton:hover,
+    .saas26x9-ctaButton:focus-visible,
+    .saas26x9-ghostButton:hover,
+    .saas26x9-ghostButton:focus-visible {
+      transform: translateY(-2px);
+      border-color: var(--saas26x9-color-border-strong);
+    }
+
+    .saas26x9-ctaButton:hover,
+    .saas26x9-ctaButton:focus-visible {
+      box-shadow: 0 18px 48px rgba(0, 212, 255, 0.23), 0 18px 38px rgba(124, 92, 255, 0.26);
+    }
+
+    .saas26x9-heroArea {
+      padding: 5rem 0 3.25rem;
+    }
+
+    .saas26x9-heroGrid {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .saas26x9-badgePill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      width: fit-content;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid rgba(124, 92, 255, 0.36);
+      border-radius: 999px;
+      background: rgba(124, 92, 255, 0.12);
+      color: #dfe6ff;
+      font-size: 0.86rem;
+      font-weight: 780;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .saas26x9-badgeDot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      background: var(--saas26x9-color-success);
+      box-shadow: 0 0 18px rgba(125, 255, 178, 0.8);
+    }
+
+    .saas26x9-heroHeading {
+      margin: 1.25rem 0 1rem;
+      max-width: 11ch;
+      font-size: clamp(3.15rem, 13vw, 6.9rem);
+      line-height: 0.9;
+      letter-spacing: -0.095em;
+    }
+
+    .saas26x9-gradientText {
+      background: linear-gradient(90deg, #ffffff 8%, #c9d4ff 45%, #78e7ff 88%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .saas26x9-heroCopy {
+      max-width: 42rem;
+      margin: 0;
+      color: var(--saas26x9-color-muted);
+      font-size: clamp(1.05rem, 2.5vw, 1.28rem);
+    }
+
+    .saas26x9-heroActions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.75rem;
+    }
+
+    .saas26x9-heroTrust {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.8rem;
+      color: var(--saas26x9-color-muted-2);
+      font-size: 0.92rem;
+    }
+
+    .saas26x9-trustFaces {
+      display: flex;
+      align-items: center;
+    }
+
+    .saas26x9-trustAvatar {
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-left: -0.5rem;
+      border: 2px solid #11182a;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.8), rgba(0, 212, 255, 0.78));
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .saas26x9-trustAvatar:first-child {
+      margin-left: 0;
+    }
+
+    .saas26x9-visualPanel {
+      position: relative;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.055)),
+        rgba(10, 15, 30, 0.7);
+      box-shadow: var(--saas26x9-shadow-soft), var(--saas26x9-shadow-glow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .saas26x9-visualPanel::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 72% 18%, rgba(0, 212, 255, 0.23), transparent 18rem),
+        radial-gradient(circle at 18% 78%, rgba(124, 92, 255, 0.26), transparent 20rem);
+      z-index: -1;
+    }
+
+    .saas26x9-dashboardTopbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--saas26x9-color-border);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .saas26x9-windowDots {
+      display: flex;
+      gap: 0.42rem;
+    }
+
+    .saas26x9-windowDot {
+      width: 0.72rem;
+      height: 0.72rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .saas26x9-windowDot:nth-child(1) {
+      background: #ff6b8a;
+    }
+
+    .saas26x9-windowDot:nth-child(2) {
+      background: #ffd166;
+    }
+
+    .saas26x9-windowDot:nth-child(3) {
+      background: #64ffda;
+    }
+
+    .saas26x9-dashboardStatus {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--saas26x9-color-muted);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .saas26x9-dashboardBody {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .saas26x9-metricRow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .saas26x9-metricTile {
+      padding: 1rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .saas26x9-metricLabel {
+      margin: 0 0 0.35rem;
+      color: var(--saas26x9-color-muted-2);
+      font-size: 0.76rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .saas26x9-metricValue {
+      margin: 0;
+      font-size: clamp(1.8rem, 7vw, 2.65rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      font-weight: 950;
+    }
+
+    .saas26x9-metricDelta {
+      display: inline-flex;
+      margin-top: 0.7rem;
+      color: var(--saas26x9-color-success);
+      font-size: 0.84rem;
+      font-weight: 850;
+    }
+
+    .saas26x9-chartBlock {
+      min-height: 16rem;
+      padding: 1rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background:
+        linear-gradient(180deg, rgba(0, 212, 255, 0.08), transparent),
+        rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+    }
+
+    .saas26x9-chartHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .saas26x9-chartTitle {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .saas26x9-chartPill {
+      padding: 0.35rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(100, 255, 218, 0.12);
+      color: var(--saas26x9-color-success);
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .saas26x9-chartBars {
+      display: flex;
+      align-items: end;
+      gap: 0.55rem;
+      height: 10.5rem;
+    }
+
+    .saas26x9-chartBar {
+      flex: 1;
+      min-width: 0.55rem;
+      border-radius: 999px 999px 0.35rem 0.35rem;
+      background: linear-gradient(180deg, var(--saas26x9-color-accent-2), var(--saas26x9-color-accent));
+      box-shadow: 0 0 22px rgba(0, 212, 255, 0.22);
+      transform-origin: bottom;
+      animation: saas26x9-barRise 1100ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .saas26x9-chartBar:nth-child(1) { height: 42%; animation-delay: 80ms; }
+    .saas26x9-chartBar:nth-child(2) { height: 58%; animation-delay: 140ms; }
+    .saas26x9-chartBar:nth-child(3) { height: 46%; animation-delay: 200ms; }
+    .saas26x9-chartBar:nth-child(4) { height: 72%; animation-delay: 260ms; }
+    .saas26x9-chartBar:nth-child(5) { height: 66%; animation-delay: 320ms; }
+    .saas26x9-chartBar:nth-child(6) { height: 84%; animation-delay: 380ms; }
+    .saas26x9-chartBar:nth-child(7) { height: 76%; animation-delay: 440ms; }
+    .saas26x9-chartBar:nth-child(8) { height: 92%; animation-delay: 500ms; }
+
+    .saas26x9-automationCard {
+      padding: 1rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .saas26x9-automationStep {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.78rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--saas26x9-color-muted);
+      font-size: 0.92rem;
+    }
+
+    .saas26x9-automationStep:last-child {
+      border-bottom: 0;
+    }
+
+    .saas26x9-stepBullet {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 999px;
+      background: rgba(124, 92, 255, 0.18);
+      color: var(--saas26x9-color-accent-3);
+      font-weight: 950;
+    }
+
+    .saas26x9-logoStrip {
+      padding: 2rem 0 4rem;
+    }
+
+    .saas26x9-logoIntro {
+      margin: 0 0 1.15rem;
+      color: var(--saas26x9-color-muted-2);
+      font-size: 0.84rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .saas26x9-logoGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .saas26x9-logoItem {
+      display: grid;
+      place-items: center;
+      min-height: 4.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 1.1rem;
+      background: rgba(255, 255, 255, 0.035);
+      color: rgba(247, 249, 255, 0.72);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .saas26x9-pageSegment {
+      padding: 4rem 0;
+    }
+
+    .saas26x9-segmentHeader {
+      max-width: 47rem;
+      margin-bottom: 2rem;
+    }
+
+    .saas26x9-kickerText {
+      margin: 0 0 0.85rem;
+      color: var(--saas26x9-color-accent-3);
+      font-size: 0.8rem;
+      font-weight: 950;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .saas26x9-segmentHeading {
+      margin: 0;
+      font-size: clamp(2.1rem, 8vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .saas26x9-segmentCopy {
+      margin: 1rem 0 0;
+      max-width: 42rem;
+      color: var(--saas26x9-color-muted);
+      font-size: 1.06rem;
+    }
+
+    .saas26x9-featureGrid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .saas26x9-featureTile {
+      position: relative;
+      padding: 1.25rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      overflow: hidden;
+      transition: transform var(--saas26x9-transition), border-color var(--saas26x9-transition), background var(--saas26x9-transition);
+    }
+
+    .saas26x9-featureTile::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -45% -20%;
+      height: 9rem;
+      background: radial-gradient(circle, rgba(124, 92, 255, 0.22), transparent 68%);
+      opacity: 0;
+      transition: opacity var(--saas26x9-transition);
+    }
+
+    .saas26x9-featureTile:hover {
+      transform: translateY(-4px);
+      border-color: var(--saas26x9-color-border-strong);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.045));
+    }
+
+    .saas26x9-featureTile:hover::after {
+      opacity: 1;
+    }
+
+    .saas26x9-featureIcon {
+      display: grid;
+      place-items: center;
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 1rem;
+      background:
+        linear-gradient(135deg, rgba(124, 92, 255, 0.32), rgba(0, 212, 255, 0.16)),
+        rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-weight: 950;
+      font-size: 1.15rem;
+    }
+
+    .saas26x9-featureHeading {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 0.55rem;
+      font-size: 1.15rem;
+      letter-spacing: -0.035em;
+    }
+
+    .saas26x9-featureText {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--saas26x9-color-muted);
+    }
+
+    .saas26x9-benefitPanel {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-lg);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(0, 212, 255, 0.14), transparent 26rem),
+        rgba(255, 255, 255, 0.045);
+      box-shadow: var(--saas26x9-shadow-soft);
+    }
+
+    .saas26x9-benefitList {
+      display: grid;
+      gap: 0.85rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .saas26x9-benefitItem {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.1rem;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .saas26x9-checkMark {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 1.55rem;
+      height: 1.55rem;
+      border-radius: 999px;
+      background: rgba(100, 255, 218, 0.14);
+      color: var(--saas26x9-color-success);
+      font-size: 0.85rem;
+      font-weight: 950;
+    }
+
+    .saas26x9-benefitItemHeading {
+      display: block;
+      color: var(--saas26x9-color-text);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+
+    .saas26x9-benefitItemText {
+      display: block;
+      margin-top: 0.15rem;
+      color: var(--saas26x9-color-muted);
+      font-size: 0.95rem;
+    }
+
+    .saas26x9-impactGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .saas26x9-impactTile {
+      padding: 1.25rem;
+      border-radius: var(--saas26x9-radius-md);
+      background:
+        linear-gradient(135deg, rgba(124, 92, 255, 0.24), rgba(0, 212, 255, 0.08)),
+        rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .saas26x9-impactNumber {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.07em;
+      font-weight: 950;
+    }
+
+    .saas26x9-impactText {
+      margin: 0.55rem 0 0;
+      color: var(--saas26x9-color-muted);
+      font-weight: 700;
+    }
+
+    .saas26x9-testimonialGrid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .saas26x9-testimonialCard {
+      padding: 1.25rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-md);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .saas26x9-starsText {
+      color: var(--saas26x9-color-warning);
+      letter-spacing: 0.08em;
+    }
+
+    .saas26x9-quoteText {
+      margin: 1rem 0 1.25rem;
+      color: #e8edff;
+      font-size: 1.02rem;
+    }
+
+    .saas26x9-personRow {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .saas26x9-personAvatar {
+      display: grid;
+      place-items: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--saas26x9-color-accent), var(--saas26x9-color-accent-2));
+      color: #ffffff;
+      font-weight: 950;
+    }
+
+    .saas26x9-personName {
+      display: block;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+
+    .saas26x9-personRole {
+      display: block;
+      color: var(--saas26x9-color-muted-2);
+      font-size: 0.9rem;
+    }
+
+    .saas26x9-pricingGrid {
+      display: grid;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .saas26x9-pricingPlan {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: var(--saas26x9-radius-lg);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .saas26x9-pricingPlan--highlighted {
+      border-color: rgba(0, 212, 255, 0.44);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.16), transparent 18rem),
+        rgba(255, 255, 255, 0.075);
+      box-shadow: 0 0 60px rgba(0, 212, 255, 0.12);
+    }
+
+    .saas26x9-pricingRibbon {
+      width: fit-content;
+      margin-bottom: 0.9rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0, 212, 255, 0.14);
+      color: #aaf3ff;
+      font-size: 0.72rem;
+      font-weight: 950;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .saas26x9-planName {
+      margin: 0;
+      font-size: 1.3rem;
+      letter-spacing: -0.04em;
+    }
+
+    .saas26x9-planDescription {
+      margin: 0.45rem 0 1.1rem;
+      color: var(--saas26x9-color-muted);
+    }
+
+    .saas26x9-planPrice {
+      display: flex;
+      align-items: end;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .saas26x9-priceAmount {
+      font-size: 3.1rem;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -0.08em;
+    }
+
+    .saas26x9-pricePeriod {
+      color: var(--saas26x9-color-muted-2);
+      font-weight: 750;
+      padding-bottom: 0.45rem;
+    }
+
+    .saas26x9-planFeatures {
+      display: grid;
+      gap: 0.7rem;
+      margin: 1.1rem 0 1.35rem;
+      padding: 0;
+      list-style: none;
+      color: var(--saas26x9-color-muted);
+    }
+
+    .saas26x9-planFeature {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+    }
+
+    .saas26x9-planFeature::before {
+      content: "✓";
+      color: var(--saas26x9-color-success);
+      font-weight: 950;
+    }
+
+    .saas26x9-planSpacer {
+      flex: 1;
+    }
+
+    .saas26x9-faqStack {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .saas26x9-faqItem {
+      border: 1px solid var(--saas26x9-color-border);
+      border-radius: 1.2rem;
+      background: rgba(255, 255, 255, 0.045);
+      overflow: hidden;
+    }
+
+    .saas26x9-faqButton {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 100%;
+      padding: 1.05rem 1.1rem;
+      border: 0;
+      background: transparent;
+      color: var(--saas26x9-color-text);
+      text-align: left;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+
+    .saas26x9-faqIcon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 1.65rem;
+      height: 1.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.075);
+      color: var(--saas26x9-color-accent-3);
+      transition: transform var(--saas26x9-transition);
+    }
+
+    .saas26x9-faqItem.saas26x9-faqItem--expanded .saas26x9-faqIcon {
+      transform: rotate(45deg);
+    }
+
+    .saas26x9-faqAnswer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows var(--saas26x9-transition);
+    }
+
+    .saas26x9-faqItem.saas26x9-faqItem--expanded .saas26x9-faqAnswer {
+      grid-template-rows: 1fr;
+    }
+
+    .saas26x9-faqAnswerInner {
+      overflow: hidden;
+    }
+
+    .saas26x9-faqText {
+      margin: 0;
+      padding: 0 1.1rem 1.1rem;
+      color: var(--saas26x9-color-muted);
+    }
+
+    .saas26x9-finalCta {
+      padding: 4rem 0;
+    }
+
+    .saas26x9-finalCtaPanel {
+      position: relative;
+      padding: clamp(1.5rem, 6vw, 3.4rem);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--saas26x9-radius-lg);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(124, 92, 255, 0.28), transparent 22rem),
+        radial-gradient(circle at 90% 20%, rgba(0, 212, 255, 0.2), transparent 24rem),
+        rgba(255, 255, 255, 0.06);
+      box-shadow: var(--saas26x9-shadow-soft);
+      overflow: hidden;
+    }
+
+    .saas26x9-finalCtaPanel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 38%);
+      pointer-events: none;
+    }
+
+    .saas26x9-finalCtaContent {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
+    .saas26x9-finalCtaHeading {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.075em;
+    }
+
+    .saas26x9-finalCtaCopy {
+      margin: 0.8rem 0 0;
+      max-width: 42rem;
+      color: var(--saas26x9-color-muted);
+      font-size: 1.08rem;
+    }
+
+    .saas26x9-emailForm {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 34rem;
+    }
+
+    .saas26x9-emailLabel {
+      color: var(--saas26x9-color-muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .saas26x9-emailControlRow {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .saas26x9-emailInput {
+      width: 100%;
+      min-height: 3.1rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      outline: 0;
+      color: var(--saas26x9-color-text);
+      background: rgba(7, 10, 18, 0.62);
+      transition: border-color var(--saas26x9-transition), box-shadow var(--saas26x9-transition);
+    }
+
+    .saas26x9-emailInput:focus {
+      border-color: rgba(0, 212, 255, 0.75);
+      box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.14);
+    }
+
+    .saas26x9-formMessage {
+      min-height: 1.35rem;
+      margin: 0;
+      color: var(--saas26x9-color-success);
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .saas26x9-siteFooter {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--saas26x9-color-muted-2);
+    }
+
+    .saas26x9-footerGrid {
+      display: grid;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .saas26x9-footerLinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .saas26x9-footerLink {
+      transition: color var(--saas26x9-transition);
+    }
+
+    .saas26x9-footerLink:hover,
+    .saas26x9-footerLink:focus-visible {
+      color: var(--saas26x9-color-text);
+    }
+
+    .saas26x9-revealMotion {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .saas26x9-revealMotion.saas26x9-revealMotion--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(0, 212, 255, 0.8);
+      outline-offset: 4px;
+    }
+
+    @keyframes saas26x9-barRise {
+      from {
+        transform: scaleY(0);
+        opacity: 0.25;
+      }
+      to {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes saas26x9-panelIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 560px) {
+      .saas26x9-logoGrid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .saas26x9-metricRow,
+      .saas26x9-impactGrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .saas26x9-emailControlRow {
+        flex-direction: row;
+      }
+
+      .saas26x9-emailControlRow .saas26x9-ctaButton {
+        white-space: nowrap;
+      }
+    }
+
+    @media (min-width: 760px) {
+      .saas26x9-featureGrid,
+      .saas26x9-testimonialGrid,
+      .saas26x9-pricingGrid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .saas26x9-benefitPanel {
+        grid-template-columns: 1.05fr 0.95fr;
+        padding: 1.25rem;
+      }
+
+      .saas26x9-footerGrid {
+        grid-template-columns: 1fr auto;
+      }
+
+      .saas26x9-heroTrust {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .saas26x9-navLinks,
+      .saas26x9-navActions {
+        display: flex;
+      }
+
+      .saas26x9-menuButton,
+      .saas26x9-mobilePanel {
+        display: none !important;
+      }
+
+      .saas26x9-heroArea {
+        padding: 7rem 0 4.5rem;
+      }
+
+      .saas26x9-heroGrid {
+        grid-template-columns: 0.98fr 1.02fr;
+      }
+
+      .saas26x9-logoGrid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .saas26x9-dashboardBody {
+        padding: 1.25rem;
+      }
+
+      .saas26x9-finalCtaContent {
+        grid-template-columns: 1fr auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+      }
+
+      .saas26x9-revealMotion {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="saas26x9-skipLink" href="#saas26x9-main">Skip to main content</a>
+
+  <div class="saas26x9-pageShell">
+    <header class="saas26x9-siteHeader">
+      <nav class="saas26x9-navBar" aria-label="Primary navigation">
+        <a class="saas26x9-brandMark" href="#" aria-label="NimbusFlow home">
+          <span class="saas26x9-brandGlyph" aria-hidden="true"></span>
+          <span>NimbusFlow</span>
+        </a>
+
+        <div class="saas26x9-navLinks" aria-label="Page sections">
+          <a class="saas26x9-navLink" href="#saas26x9-features">Features</a>
+          <a class="saas26x9-navLink" href="#saas26x9-benefits">Benefits</a>
+          <a class="saas26x9-navLink" href="#saas26x9-testimonials">Customers</a>
+          <a class="saas26x9-navLink" href="#saas26x9-pricing">Pricing</a>
+          <a class="saas26x9-navLink" href="#saas26x9-faq">FAQ</a>
+        </div>
+
+        <div class="saas26x9-navActions">
+          <a class="saas26x9-ghostButton" href="#saas26x9-pricing">View pricing</a>
+          <a class="saas26x9-ctaButton" href="#saas26x9-demo">Start free</a>
+        </div>
+
+        <button class="saas26x9-menuButton" id="saas26x9-menuButton" type="button" aria-label="Open navigation menu" aria-controls="saas26x9-mobilePanel" aria-expanded="false">
+          <span class="saas26x9-menuIcon" aria-hidden="true"></span>
+        </button>
       </nav>
 
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Switch to dark theme" aria-pressed="false">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 4V2m0 20v-2M4 12H2m20 0h-2m-2.34-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 14.2A8.5 8.5 0 0 1 9.8 3a8.5 8.5 0 1 0 11.2 11.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        <a class="btn btn-secondary mobile-hidden" href="#pricing">View plans</a>
-        <a class="btn btn-primary mobile-hidden" href="#cta">Start free</a>
-        <button class="nav-toggle" type="button" data-nav-toggle="" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
-          <span class="nav-toggle-line" aria-hidden="true"></span>
-        </button>
+      <div class="saas26x9-mobilePanel" id="saas26x9-mobilePanel">
+        <a class="saas26x9-mobileLink" href="#saas26x9-features">Features</a>
+        <a class="saas26x9-mobileLink" href="#saas26x9-benefits">Benefits</a>
+        <a class="saas26x9-mobileLink" href="#saas26x9-testimonials">Customers</a>
+        <a class="saas26x9-mobileLink" href="#saas26x9-pricing">Pricing</a>
+        <a class="saas26x9-mobileLink" href="#saas26x9-faq">FAQ</a>
+        <a class="saas26x9-ctaButton" href="#saas26x9-demo">Start free</a>
       </div>
-    </div>
-  </header><main></main><footer class="site-footer" aria-labelledby="footer-title">
-    <div class="container-wide">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="#hero" aria-label="NexaFlow home">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" role="img">
-                <path d="M5 12.7C5 8.4 8.4 5 12.7 5H19v6.3c0 4.3-3.4 7.7-7.7 7.7H5v-6.3Z" fill="currentColor" opacity=".92"></path>
-                <path d="M9 14.8 15.8 8M14.8 8h1v1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </span>
-            <span class="brand-name">NexaFlow</span>
-          </a>
-          <p id="footer-title">Premium AI workflow automation for revenue and operations teams that want measurable leverage.</p>
-          <div class="social-links" aria-label="Social links">
-            <a href="#hero" aria-label="NexaFlow on LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 10v8M7 7v.01M11 18v-4.5A3.5 3.5 0 0 1 14.5 10v0A3.5 3.5 0 0 1 18 13.5V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
-            <a href="#hero" aria-label="NexaFlow on X">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="m4 4 16 16M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
-            <a href="#hero" aria-label="NexaFlow community">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M16 11a4 4 0 1 0-8 0v1a4 4 0 0 0 8 0v-1Z" stroke="currentColor" stroke-width="2"></path>
-                <path d="M4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
+    </header>
+
+    <main id="saas26x9-main">
+      <section class="saas26x9-heroArea">
+        <div class="saas26x9-layoutBand saas26x9-heroGrid">
+          <div class="saas26x9-revealMotion">
+            <div class="saas26x9-badgePill">
+              <span class="saas26x9-badgeDot" aria-hidden="true"></span>
+              AI operations platform for scale-ups
+            </div>
+
+            <h1 class="saas26x9-heroHeading">
+              Run your entire ops engine on <span class="saas26x9-gradientText">autopilot.</span>
+            </h1>
+
+            <p class="saas26x9-heroCopy">
+              NimbusFlow unifies workflows, customer data, approvals, and reporting into one AI-powered command center — so your team ships faster without operational chaos.
+            </p>
+
+            <div class="saas26x9-heroActions">
+              <a class="saas26x9-ctaButton" href="#saas26x9-demo">Start 14-day free trial</a>
+              <a class="saas26x9-ghostButton" href="#saas26x9-testimonials">See customer results</a>
+            </div>
+
+            <div class="saas26x9-heroTrust" aria-label="Customer trust summary">
+              <div class="saas26x9-trustFaces" aria-hidden="true">
+                <span class="saas26x9-trustAvatar">AK</span>
+                <span class="saas26x9-trustAvatar">MR</span>
+                <span class="saas26x9-trustAvatar">JT</span>
+                <span class="saas26x9-trustAvatar">SL</span>
+              </div>
+              <span>Trusted by 8,400+ operators, founders, and revenue teams.</span>
+            </div>
+          </div>
+
+          <div class="saas26x9-visualPanel saas26x9-revealMotion" aria-label="NimbusFlow dashboard preview">
+            <div class="saas26x9-dashboardTopbar">
+              <div class="saas26x9-windowDots" aria-hidden="true">
+                <span class="saas26x9-windowDot"></span>
+                <span class="saas26x9-windowDot"></span>
+                <span class="saas26x9-windowDot"></span>
+              </div>
+              <div class="saas26x9-dashboardStatus">
+                <span class="saas26x9-badgeDot" aria-hidden="true"></span>
+                Live automation health
+              </div>
+            </div>
+
+            <div class="saas26x9-dashboardBody">
+              <div class="saas26x9-metricRow">
+                <div class="saas26x9-metricTile">
+                  <p class="saas26x9-metricLabel">Time saved</p>
+                  <p class="saas26x9-metricValue">1,284h</p>
+                  <span class="saas26x9-metricDelta">↑ 38% this quarter</span>
+                </div>
+                <div class="saas26x9-metricTile">
+                  <p class="saas26x9-metricLabel">SLA accuracy</p>
+                  <p class="saas26x9-metricValue">99.7%</p>
+                  <span class="saas26x9-metricDelta">↑ 18.2% improved</span>
+                </div>
+              </div>
+
+              <div class="saas26x9-chartBlock">
+                <div class="saas26x9-chartHeader">
+                  <p class="saas26x9-chartTitle">Workflow throughput</p>
+                  <span class="saas26x9-chartPill">AI optimized</span>
+                </div>
+                <div class="saas26x9-chartBars" aria-hidden="true">
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                  <span class="saas26x9-chartBar"></span>
+                </div>
+              </div>
+
+              <div class="saas26x9-automationCard">
+                <div class="saas26x9-automationStep">
+                  <span class="saas26x9-stepBullet">1</span>
+                  Customer expansion signal detected
+                </div>
+                <div class="saas26x9-automationStep">
+                  <span class="saas26x9-stepBullet">2</span>
+                  Account owner brief generated
+                </div>
+                <div class="saas26x9-automationStep">
+                  <span class="saas26x9-stepBullet">3</span>
+                  Approval routed and CRM updated
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h2>Product</h2>
-            <ul class="footer-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#benefits">Benefits</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Customers</h2>
-            <ul class="footer-links">
-              <li><a href="#testimonials">Stories</a></li>
-              <li><a href="#benefits">Results</a></li>
-              <li><a href="#cta">Start trial</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Resources</h2>
-            <ul class="footer-links">
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#features">Platform tour</a></li>
-              <li><a href="#hero">Product preview</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Company</h2>
-            <ul class="footer-links">
-              <li><a href="#hero">About</a></li>
-              <li><a href="#pricing">Plans</a></li>
-              <li><a href="#cta">Contact sales</a></li>
-            </ul>
+      <section class="saas26x9-logoStrip" aria-label="Companies using NimbusFlow">
+        <div class="saas26x9-layoutBand">
+          <p class="saas26x9-logoIntro">Powering modern teams at</p>
+          <div class="saas26x9-logoGrid">
+            <div class="saas26x9-logoItem">Apexly</div>
+            <div class="saas26x9-logoItem">OrbitIQ</div>
+            <div class="saas26x9-logoItem">Stackora</div>
+            <div class="saas26x9-logoItem">BrightOps</div>
+            <div class="saas26x9-logoItem">VeloCloud</div>
+            <div class="saas26x9-logoItem">Northstar</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="footer-bottom">
-        <p>© <span data-current-year="">2026</span> NexaFlow. All rights reserved.</p>
-        <p>Fast, accessible, and built with vanilla web standards.</p>
+      <section class="saas26x9-pageSegment" id="saas26x9-features">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-segmentHeader saas26x9-revealMotion">
+            <p class="saas26x9-kickerText">Features</p>
+            <h2 class="saas26x9-segmentHeading">Everything your ops team needs to move faster.</h2>
+            <p class="saas26x9-segmentCopy">
+              Replace scattered spreadsheets, brittle automations, and status meetings with a connected operating layer built for speed, governance, and scale.
+            </p>
+          </div>
+
+          <div class="saas26x9-featureGrid">
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">AI</div>
+              <h3 class="saas26x9-featureHeading">AI workflow builder</h3>
+              <p class="saas26x9-featureText">Describe a process in plain English and NimbusFlow turns it into reliable automations with approvals, branching, and safeguards.</p>
+            </article>
+
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">↗</div>
+              <h3 class="saas26x9-featureHeading">Revenue intelligence</h3>
+              <p class="saas26x9-featureText">Surface churn risks, expansion signals, and pipeline blockers automatically across your CRM, support, billing, and product data.</p>
+            </article>
+
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">✓</div>
+              <h3 class="saas26x9-featureHeading">Approval control center</h3>
+              <p class="saas26x9-featureText">Route approvals to the right stakeholders with audit trails, SLA timers, escalation paths, and real-time accountability.</p>
+            </article>
+
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">◎</div>
+              <h3 class="saas26x9-featureHeading">Unified customer timeline</h3>
+              <p class="saas26x9-featureText">Give every team a shared view of customer health, conversations, tasks, risks, invoices, usage, and next-best actions.</p>
+            </article>
+
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">⚡</div>
+              <h3 class="saas26x9-featureHeading">Instant reporting</h3>
+              <p class="saas26x9-featureText">Generate board-ready dashboards, weekly summaries, and operational forecasts without waiting on analysts or exports.</p>
+            </article>
+
+            <article class="saas26x9-featureTile saas26x9-revealMotion">
+              <div class="saas26x9-featureIcon" aria-hidden="true">🔒</div>
+              <h3 class="saas26x9-featureHeading">Enterprise-grade security</h3>
+              <p class="saas26x9-featureText">Role-based access, SSO-ready architecture, encrypted records, audit logs, and data retention controls are built in.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="saas26x9-pageSegment" id="saas26x9-benefits">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-benefitPanel">
+            <div class="saas26x9-revealMotion">
+              <p class="saas26x9-kickerText">Benefits</p>
+              <h2 class="saas26x9-segmentHeading">Scale operations without adding headcount.</h2>
+              <p class="saas26x9-segmentCopy">
+                NimbusFlow gives lean teams the execution power of a dedicated operations department — while improving accuracy, visibility, and customer experience.
+              </p>
+
+              <ul class="saas26x9-benefitList">
+                <li class="saas26x9-benefitItem">
+                  <span class="saas26x9-checkMark" aria-hidden="true">✓</span>
+                  <span>
+                    <strong class="saas26x9-benefitItemHeading">Launch workflows in minutes</strong>
+                    <span class="saas26x9-benefitItemText">Turn repeatable internal processes into governed automations without engineering tickets.</span>
+                  </span>
+                </li>
+                <li class="saas26x9-benefitItem">
+                  <span class="saas26x9-checkMark" aria-hidden="true">✓</span>
+                  <span>
+                    <strong class="saas26x9-benefitItemHeading">Reduce operational risk</strong>
+                    <span class="saas26x9-benefitItemText">Catch missed handoffs, delayed approvals, and process drift before they impact customers.</span>
+                  </span>
+                </li>
+                <li class="saas26x9-benefitItem">
+                  <span class="saas26x9-checkMark" aria-hidden="true">✓</span>
+                  <span>
+                    <strong class="saas26x9-benefitItemHeading">Create one source of truth</strong>
+                    <span class="saas26x9-benefitItemText">Bring customer, revenue, support, product, and finance data into a single operating view.</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="saas26x9-impactGrid saas26x9-revealMotion" aria-label="Measured business impact">
+              <div class="saas26x9-impactTile">
+                <p class="saas26x9-impactNumber">42%</p>
+                <p class="saas26x9-impactText">faster customer handoffs after implementation</p>
+              </div>
+              <div class="saas26x9-impactTile">
+                <p class="saas26x9-impactNumber">3.8x</p>
+                <p class="saas26x9-impactText">more workflows shipped per operations manager</p>
+              </div>
+              <div class="saas26x9-impactTile">
+                <p class="saas26x9-impactNumber">67%</p>
+                <p class="saas26x9-impactText">reduction in manual reporting time</p>
+              </div>
+              <div class="saas26x9-impactTile">
+                <p class="saas26x9-impactNumber">99.9%</p>
+                <p class="saas26x9-impactText">platform uptime for mission-critical teams</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="saas26x9-pageSegment" id="saas26x9-testimonials">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-segmentHeader saas26x9-revealMotion">
+            <p class="saas26x9-kickerText">Social proof</p>
+            <h2 class="saas26x9-segmentHeading">Loved by teams who cannot afford slow operations.</h2>
+          </div>
+
+          <div class="saas26x9-testimonialGrid">
+            <figure class="saas26x9-testimonialCard saas26x9-revealMotion">
+              <div class="saas26x9-starsText" aria-label="Five out of five stars">★★★★★</div>
+              <blockquote class="saas26x9-quoteText">
+                “NimbusFlow replaced six internal tools and gave our CS, RevOps, and finance teams one shared source of truth. We shipped more process improvements in two weeks than the previous two quarters.”
+              </blockquote>
+              <figcaption class="saas26x9-personRow">
+                <span class="saas26x9-personAvatar" aria-hidden="true">EL</span>
+                <span>
+                  <span class="saas26x9-personName">Emma Liu</span>
+                  <span class="saas26x9-personRole">VP Operations, Apexly</span>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="saas26x9-testimonialCard saas26x9-revealMotion">
+              <div class="saas26x9-starsText" aria-label="Five out of five stars">★★★★★</div>
+              <blockquote class="saas26x9-quoteText">
+                “The AI briefings are magic. Every account owner walks into renewal conversations with context, risks, usage patterns, and recommended next steps already prepared.”
+              </blockquote>
+              <figcaption class="saas26x9-personRow">
+                <span class="saas26x9-personAvatar" aria-hidden="true">DK</span>
+                <span>
+                  <span class="saas26x9-personName">Daniel Kim</span>
+                  <span class="saas26x9-personRole">Chief Revenue Officer, OrbitIQ</span>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="saas26x9-testimonialCard saas26x9-revealMotion">
+              <div class="saas26x9-starsText" aria-label="Five out of five stars">★★★★★</div>
+              <blockquote class="saas26x9-quoteText">
+                “We finally have governance without bottlenecks. Approvals are faster, audit trails are cleaner, and our executive reporting is always current.”
+              </blockquote>
+              <figcaption class="saas26x9-personRow">
+                <span class="saas26x9-personAvatar" aria-hidden="true">PR</span>
+                <span>
+                  <span class="saas26x9-personName">Priya Rao</span>
+                  <span class="saas26x9-personRole">COO, Stackora</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="saas26x9-pageSegment" id="saas26x9-pricing">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-segmentHeader saas26x9-revealMotion">
+            <p class="saas26x9-kickerText">Pricing</p>
+            <h2 class="saas26x9-segmentHeading">Plans that grow with your operating rhythm.</h2>
+            <p class="saas26x9-segmentCopy">Start free. Upgrade when you need more automation volume, governance, and intelligence.</p>
+          </div>
+
+          <div class="saas26x9-pricingGrid">
+            <article class="saas26x9-pricingPlan saas26x9-revealMotion">
+              <h3 class="saas26x9-planName">Starter</h3>
+              <p class="saas26x9-planDescription">For small teams automating their first critical workflows.</p>
+              <div class="saas26x9-planPrice">
+                <span class="saas26x9-priceAmount">$29</span>
+                <span class="saas26x9-pricePeriod">/seat/mo</span>
+              </div>
+              <ul class="saas26x9-planFeatures">
+                <li class="saas26x9-planFeature">10 active workflows</li>
+                <li class="saas26x9-planFeature">AI workflow drafting</li>
+                <li class="saas26x9-planFeature">Basic dashboards</li>
+                <li class="saas26x9-planFeature">Email support</li>
+              </ul>
+              <div class="saas26x9-planSpacer"></div>
+              <a class="saas26x9-ghostButton" href="#saas26x9-demo">Start Starter</a>
+            </article>
+
+            <article class="saas26x9-pricingPlan saas26x9-pricingPlan--highlighted saas26x9-revealMotion">
+              <span class="saas26x9-pricingRibbon">Most popular</span>
+              <h3 class="saas26x9-planName">Growth</h3>
+              <p class="saas26x9-planDescription">For scaling companies standardizing revenue and customer operations.</p>
+              <div class="saas26x9-planPrice">
+                <span class="saas26x9-priceAmount">$79</span>
+                <span class="saas26x9-pricePeriod">/seat/mo</span>
+              </div>
+              <ul class="saas26x9-planFeatures">
+                <li class="saas26x9-planFeature">Unlimited workflows</li>
+                <li class="saas26x9-planFeature">Revenue intelligence</li>
+                <li class="saas26x9-planFeature">Advanced approvals</li>
+                <li class="saas26x9-planFeature">Priority support</li>
+                <li class="saas26x9-planFeature">Custom dashboards</li>
+              </ul>
+              <div class="saas26x9-planSpacer"></div>
+              <a class="saas26x9-ctaButton" href="#saas26x9-demo">Start Growth</a>
+            </article>
+
+            <article class="saas26x9-pricingPlan saas26x9-revealMotion">
+              <h3 class="saas26x9-planName">Enterprise</h3>
+              <p class="saas26x9-planDescription">For organizations requiring advanced security, controls, and onboarding.</p>
+              <div class="saas26x9-planPrice">
+                <span class="saas26x9-priceAmount">Custom</span>
+              </div>
+              <ul class="saas26x9-planFeatures">
+                <li class="saas26x9-planFeature">SSO and SCIM</li>
+                <li class="saas26x9-planFeature">Dedicated success manager</li>
+                <li class="saas26x9-planFeature">Custom data retention</li>
+                <li class="saas26x9-planFeature">Security reviews</li>
+                <li class="saas26x9-planFeature">Premium SLA</li>
+              </ul>
+              <div class="saas26x9-planSpacer"></div>
+              <a class="saas26x9-ghostButton" href="#saas26x9-demo">Contact sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="saas26x9-pageSegment" id="saas26x9-faq">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-segmentHeader saas26x9-revealMotion">
+            <p class="saas26x9-kickerText">FAQ</p>
+            <h2 class="saas26x9-segmentHeading">Questions before you automate?</h2>
+          </div>
+
+          <div class="saas26x9-faqStack">
+            <div class="saas26x9-faqItem saas26x9-faqItem--expanded">
+              <h3>
+                <button class="saas26x9-faqButton" type="button" aria-expanded="true" aria-controls="saas26x9-faqAnswer1">
+                  How quickly can our team launch?
+                  <span class="saas26x9-faqIcon" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="saas26x9-faqAnswer" id="saas26x9-faqAnswer1">
+                <div class="saas26x9-faqAnswerInner">
+                  <p class="saas26x9-faqText">Most teams connect their core tools and launch their first workflow in under an hour. Growth and Enterprise customers also receive guided onboarding templates.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="saas26x9-faqItem">
+              <h3>
+                <button class="saas26x9-faqButton" type="button" aria-expanded="false" aria-controls="saas26x9-faqAnswer2">
+                  Do we need engineering resources?
+                  <span class="saas26x9-faqIcon" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="saas26x9-faqAnswer" id="saas26x9-faqAnswer2">
+                <div class="saas26x9-faqAnswerInner">
+                  <p class="saas26x9-faqText">No. NimbusFlow is designed for operations, customer success, revenue, and finance leaders. Technical teams can assist with advanced integrations, but they are not required for everyday automation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="saas26x9-faqItem">
+              <h3>
+                <button class="saas26x9-faqButton" type="button" aria-expanded="false" aria-controls="saas26x9-faqAnswer3">
+                  Which tools does NimbusFlow connect to?
+                  <span class="saas26x9-faqIcon" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="saas26x9-faqAnswer" id="saas26x9-faqAnswer3">
+                <div class="saas26x9-faqAnswerInner">
+                  <p class="saas26x9-faqText">NimbusFlow can connect to common CRM, support, product analytics, billing, communication, and warehouse tools through native integrations and secure API connections.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="saas26x9-faqItem">
+              <h3>
+                <button class="saas26x9-faqButton" type="button" aria-expanded="false" aria-controls="saas26x9-faqAnswer4">
+                  Is our data secure?
+                  <span class="saas26x9-faqIcon" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="saas26x9-faqAnswer" id="saas26x9-faqAnswer4">
+                <div class="saas26x9-faqAnswerInner">
+                  <p class="saas26x9-faqText">Yes. NimbusFlow uses encryption in transit and at rest, granular permissions, audit trails, and enterprise security controls. Enterprise plans include custom security reviews.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="saas26x9-finalCta" id="saas26x9-demo">
+        <div class="saas26x9-layoutBand">
+          <div class="saas26x9-finalCtaPanel">
+            <div class="saas26x9-finalCtaContent">
+              <div>
+                <h2 class="saas26x9-finalCtaHeading">Build your AI ops engine today.</h2>
+                <p class="saas26x9-finalCtaCopy">Start free for 14 days. No credit card required. Launch your first workflow before your next team meeting.</p>
+              </div>
+
+              <form class="saas26x9-emailForm" id="saas26x9-emailForm" novalidate>
+                <label class="saas26x9-emailLabel" for="saas26x9-emailInput">Work email</label>
+                <div class="saas26x9-emailControlRow">
+                  <input class="saas26x9-emailInput" id="saas26x9-emailInput" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+                  <button class="saas26x9-ctaButton" type="submit">Get started</button>
+                </div>
+                <p class="saas26x9-formMessage" id="saas26x9-formMessage" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="saas26x9-siteFooter">
+      <div class="saas26x9-layoutBand saas26x9-footerGrid">
+        <a class="saas26x9-brandMark" href="#" aria-label="NimbusFlow home">
+          <span class="saas26x9-brandGlyph" aria-hidden="true"></span>
+          <span>NimbusFlow</span>
+        </a>
+
+        <div class="saas26x9-footerLinks" aria-label="Footer links">
+          <a class="saas26x9-footerLink" href="#saas26x9-features">Features</a>
+          <a class="saas26x9-footerLink" href="#saas26x9-pricing">Pricing</a>
+          <a class="saas26x9-footerLink" href="#saas26x9-faq">FAQ</a>
+          <span>© 2026 NimbusFlow. All rights reserved.</span>
+        </div>
       </div>
-    </div>
-  </footer><script src="/script.js"></script></body></html>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var saas26x9MenuButton = document.getElementById("saas26x9-menuButton");
+      var saas26x9MobilePanel = document.getElementById("saas26x9-mobilePanel");
+      var saas26x9MobileLinks = document.querySelectorAll(".saas26x9-mobileLink, .saas26x9-mobilePanel .saas26x9-ctaButton");
+
+      function saas26x9SetMobileMenu(saas26x9IsOpen) {
+        if (!saas26x9MenuButton || !saas26x9MobilePanel) return;
+        saas26x9MenuButton.setAttribute("aria-expanded", String(saas26x9IsOpen));
+        saas26x9MenuButton.setAttribute("aria-label", saas26x9IsOpen ? "Close navigation menu" : "Open navigation menu");
+        saas26x9MobilePanel.classList.toggle("saas26x9-mobilePanel--shown", saas26x9IsOpen);
+        document.body.classList.toggle("saas26x9-body-lock", saas26x9IsOpen);
+      }
+
+      if (saas26x9MenuButton && saas26x9MobilePanel) {
+        saas26x9MenuButton.addEventListener("click", function () {
+          var saas26x9IsOpen = saas26x9MenuButton.getAttribute("aria-expanded") === "true";
+          saas26x9SetMobileMenu(!saas26x9IsOpen);
+        });
+
+        saas26x9MobileLinks.forEach(function (saas26x9Link) {
+          saas26x9Link.addEventListener("click", function () {
+            saas26x9SetMobileMenu(false);
+          });
+        });
+
+        document.addEventListener("keydown", function (saas26x9Event) {
+          if (saas26x9Event.key === "Escape") {
+            saas26x9SetMobileMenu(false);
+          }
+        });
+      }
+
+      var saas26x9FaqButtons = document.querySelectorAll(".saas26x9-faqButton");
+
+      saas26x9FaqButtons.forEach(function (saas26x9Button) {
+        saas26x9Button.addEventListener("click", function () {
+          var saas26x9Item = saas26x9Button.closest(".saas26x9-faqItem");
+          var saas26x9IsExpanded = saas26x9Button.getAttribute("aria-expanded") === "true";
+
+          if (!saas26x9Item) return;
+
+          saas26x9Item.classList.toggle("saas26x9-faqItem--expanded", !saas26x9IsExpanded);
+          saas26x9Button.setAttribute("aria-expanded", String(!saas26x9IsExpanded));
+        });
+      });
+
+      var saas26x9EmailForm = document.getElementById("saas26x9-emailForm");
+      var saas26x9EmailInput = document.getElementById("saas26x9-emailInput");
+      var saas26x9FormMessage = document.getElementById("saas26x9-formMessage");
+
+      if (saas26x9EmailForm && saas26x9EmailInput && saas26x9FormMessage) {
+        saas26x9EmailForm.addEventListener("submit", function (saas26x9Event) {
+          saas26x9Event.preventDefault();
+
+          if (!saas26x9EmailInput.validity.valid) {
+            saas26x9FormMessage.textContent = "Please enter a valid work email to continue.";
+            saas26x9FormMessage.style.color = "#ffd166";
+            saas26x9EmailInput.focus();
+            return;
+          }
+
+          saas26x9FormMessage.textContent = "You're in — we'll send your trial setup link shortly.";
+          saas26x9FormMessage.style.color = "#7dffb2";
+          saas26x9EmailForm.reset();
+        });
+      }
+
+      var saas26x9RevealItems = document.querySelectorAll(".saas26x9-revealMotion");
+
+      if ("IntersectionObserver" in window) {
+        var saas26x9Observer = new IntersectionObserver(function (saas26x9Entries) {
+          saas26x9Entries.forEach(function (saas26x9Entry) {
+            if (saas26x9Entry.isIntersecting) {
+              saas26x9Entry.target.classList.add("saas26x9-revealMotion--visible");
+              saas26x9Observer.unobserve(saas26x9Entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+
+        saas26x9RevealItems.forEach(function (saas26x9Item) {
+          saas26x9Observer.observe(saas26x9Item);
+        });
+      } else {
+        saas26x9RevealItems.forEach(function (saas26x9Item) {
+          saas26x9Item.classList.add("saas26x9-revealMotion--visible");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
