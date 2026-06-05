@@ -1,122 +1,2070 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexaFlow — AI Workflow Automation for High-Growth Teams</title>
-  <meta name="description" content="NexaFlow is a premium AI workflow automation platform that helps revenue and operations teams launch, measure, and optimize critical work in minutes.">
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body><header class="site-header" data-site-header="">
-    <div class="container-wide header-inner">
-      <a class="brand" href="#hero" aria-label="NexaFlow home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" role="img">
-            <path d="M5 12.7C5 8.4 8.4 5 12.7 5H19v6.3c0 4.3-3.4 7.7-7.7 7.7H5v-6.3Z" fill="currentColor" opacity=".92"></path>
-            <path d="M9 14.8 15.8 8M14.8 8h1v1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </span>
-        <span class="brand-name">NexaFlow</span>
-      </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lumora is a premium AI-powered SaaS platform for revenue teams that want faster workflows, clearer insights, and predictable growth." />
+  <title>Lumora — AI Revenue Operations Platform</title>
+  <style>
+    :root {
+      --klar-saas26-x9q-ink: #07111f;
+      --klar-saas26-x9q-ink-soft: #243247;
+      --klar-saas26-x9q-muted: #66758c;
+      --klar-saas26-x9q-muted-2: #8593a8;
+      --klar-saas26-x9q-surface: #ffffff;
+      --klar-saas26-x9q-surface-2: #f6f8fc;
+      --klar-saas26-x9q-surface-3: #eef3fb;
+      --klar-saas26-x9q-line: rgba(12, 28, 52, 0.12);
+      --klar-saas26-x9q-line-strong: rgba(12, 28, 52, 0.18);
+      --klar-saas26-x9q-brand: #5b5df7;
+      --klar-saas26-x9q-brand-2: #7c3cff;
+      --klar-saas26-x9q-brand-3: #00b8d9;
+      --klar-saas26-x9q-accent: #12c99b;
+      --klar-saas26-x9q-warn: #ffb020;
+      --klar-saas26-x9q-danger: #ff5c7a;
+      --klar-saas26-x9q-shadow-sm: 0 10px 30px rgba(11, 28, 54, 0.08);
+      --klar-saas26-x9q-shadow-md: 0 22px 70px rgba(11, 28, 54, 0.14);
+      --klar-saas26-x9q-shadow-lg: 0 34px 110px rgba(57, 61, 180, 0.22);
+      --klar-saas26-x9q-radius-sm: 14px;
+      --klar-saas26-x9q-radius-md: 22px;
+      --klar-saas26-x9q-radius-lg: 34px;
+      --klar-saas26-x9q-max: 1180px;
+      --klar-saas26-x9q-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a class="nav-link" data-nav-link="" href="#features">Features</a>
-        <a class="nav-link" data-nav-link="" href="#benefits">Benefits</a>
-        <a class="nav-link" data-nav-link="" href="#testimonials">Customers</a>
-        <a class="nav-link" data-nav-link="" href="#pricing">Pricing</a>
-        <a class="nav-link" data-nav-link="" href="#faq">FAQ</a>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: var(--klar-saas26-x9q-ink);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(91, 93, 247, 0.18), transparent 36rem),
+        linear-gradient(180deg, #fbfdff 0%, #f7f9fd 48%, #ffffff 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body.klar-saas26-x9q-menuLocked {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background: var(--klar-saas26-x9q-brand);
+    }
+
+    .klar-saas26-x9q-skipLink {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      transform: translateY(-140%);
+      border-radius: 999px;
+      padding: 12px 16px;
+      color: #ffffff;
+      background: var(--klar-saas26-x9q-ink);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+      transition: transform 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-skipLink:focus {
+      transform: translateY(0);
+      outline: 3px solid rgba(91, 93, 247, 0.35);
+      outline-offset: 3px;
+    }
+
+    .klar-saas26-x9q-pageFrame {
+      min-height: 100vh;
+      isolation: isolate;
+    }
+
+    .klar-saas26-x9q-widthRail {
+      width: min(100% - 32px, var(--klar-saas26-x9q-max));
+      margin-inline: auto;
+    }
+
+    .klar-saas26-x9q-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid transparent;
+      background: rgba(251, 253, 255, 0.72);
+      backdrop-filter: blur(22px);
+      transition: border-color 220ms var(--klar-saas26-x9q-ease), box-shadow 220ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-topbar.klar-saas26-x9q-topbarScrolled {
+      border-bottom-color: var(--klar-saas26-x9q-line);
+      box-shadow: 0 14px 40px rgba(11, 28, 54, 0.06);
+    }
+
+    .klar-saas26-x9q-navGrid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 20px;
+    }
+
+    .klar-saas26-x9q-markLink {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      font-size: 1.18rem;
+    }
+
+    .klar-saas26-x9q-markSymbol {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.75), transparent 24%),
+        linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-2) 58%, var(--klar-saas26-x9q-brand-3));
+      box-shadow: 0 16px 35px rgba(91, 93, 247, 0.28);
+    }
+
+    .klar-saas26-x9q-markName {
+      line-height: 1;
+    }
+
+    .klar-saas26-x9q-desktopLinks {
+      display: none;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .klar-saas26-x9q-navAnchor {
+      position: relative;
+      border-radius: 999px;
+      padding: 10px 13px;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: color 180ms var(--klar-saas26-x9q-ease), background 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-navAnchor:hover,
+    .klar-saas26-x9q-navAnchor:focus-visible {
+      color: var(--klar-saas26-x9q-ink);
+      background: rgba(91, 93, 247, 0.08);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-navActions {
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .klar-saas26-x9q-textAction {
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--klar-saas26-x9q-ink-soft);
+      font-size: 0.94rem;
+      font-weight: 800;
+      transition: background 180ms var(--klar-saas26-x9q-ease), color 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-textAction:hover,
+    .klar-saas26-x9q-textAction:focus-visible {
+      color: var(--klar-saas26-x9q-brand);
+      background: rgba(91, 93, 247, 0.08);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-solidAction,
+    .klar-saas26-x9q-outlineAction,
+    .klar-saas26-x9q-subtleAction {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 999px;
+      padding: 13px 18px;
+      border: 1px solid transparent;
+      font-weight: 850;
+      line-height: 1;
+      cursor: pointer;
+      transition:
+        transform 180ms var(--klar-saas26-x9q-ease),
+        box-shadow 180ms var(--klar-saas26-x9q-ease),
+        background 180ms var(--klar-saas26-x9q-ease),
+        border-color 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-solidAction {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-2));
+      box-shadow: 0 16px 36px rgba(91, 93, 247, 0.28);
+    }
+
+    .klar-saas26-x9q-solidAction:hover,
+    .klar-saas26-x9q-solidAction:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(91, 93, 247, 0.34);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-outlineAction {
+      color: var(--klar-saas26-x9q-ink);
+      background: rgba(255, 255, 255, 0.72);
+      border-color: var(--klar-saas26-x9q-line-strong);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+    }
+
+    .klar-saas26-x9q-outlineAction:hover,
+    .klar-saas26-x9q-outlineAction:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(91, 93, 247, 0.34);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-subtleAction {
+      color: var(--klar-saas26-x9q-ink);
+      background: transparent;
+      border-color: var(--klar-saas26-x9q-line);
+    }
+
+    .klar-saas26-x9q-subtleAction:hover,
+    .klar-saas26-x9q-subtleAction:focus-visible {
+      border-color: rgba(91, 93, 247, 0.35);
+      background: rgba(91, 93, 247, 0.07);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-menuButton {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 14px;
+      color: var(--klar-saas26-x9q-ink);
+      background: rgba(255, 255, 255, 0.78);
+      cursor: pointer;
+    }
+
+    .klar-saas26-x9q-menuButton:focus-visible {
+      outline: 3px solid rgba(91, 93, 247, 0.28);
+      outline-offset: 3px;
+    }
+
+    .klar-saas26-x9q-menuBars {
+      position: relative;
+      width: 18px;
+      height: 12px;
+    }
+
+    .klar-saas26-x9q-menuBars::before,
+    .klar-saas26-x9q-menuBars::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      border-radius: 99px;
+      background: currentColor;
+      transition: transform 180ms var(--klar-saas26-x9q-ease), top 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-menuBars::before {
+      top: 1px;
+    }
+
+    .klar-saas26-x9q-menuBars::after {
+      top: 9px;
+    }
+
+    .klar-saas26-x9q-menuButton[aria-expanded="true"] .klar-saas26-x9q-menuBars::before {
+      top: 5px;
+      transform: rotate(45deg);
+    }
+
+    .klar-saas26-x9q-menuButton[aria-expanded="true"] .klar-saas26-x9q-menuBars::after {
+      top: 5px;
+      transform: rotate(-45deg);
+    }
+
+    .klar-saas26-x9q-mobilePanel {
+      display: grid;
+      grid-template-rows: 0fr;
+      border-top: 1px solid transparent;
+      transition: grid-template-rows 240ms var(--klar-saas26-x9q-ease), border-color 240ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-mobilePanel[data-open="true"] {
+      grid-template-rows: 1fr;
+      border-top-color: var(--klar-saas26-x9q-line);
+    }
+
+    .klar-saas26-x9q-mobilePanelInner {
+      overflow: hidden;
+    }
+
+    .klar-saas26-x9q-mobileLinkStack {
+      display: grid;
+      gap: 8px;
+      padding: 16px 0 22px;
+    }
+
+    .klar-saas26-x9q-mobileLinkStack .klar-saas26-x9q-navAnchor,
+    .klar-saas26-x9q-mobileLinkStack .klar-saas26-x9q-textAction,
+    .klar-saas26-x9q-mobileLinkStack .klar-saas26-x9q-solidAction {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .klar-saas26-x9q-introBand {
+      position: relative;
+      padding: 64px 0 56px;
+    }
+
+    .klar-saas26-x9q-introBand::before,
+    .klar-saas26-x9q-introBand::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 999px;
+      filter: blur(4px);
+      opacity: 0.82;
+      pointer-events: none;
+    }
+
+    .klar-saas26-x9q-introBand::before {
+      top: 130px;
+      left: max(-180px, calc(50% - 740px));
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(0, 184, 217, 0.18), transparent 64%);
+    }
+
+    .klar-saas26-x9q-introBand::after {
+      top: 70px;
+      right: max(-200px, calc(50% - 780px));
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, rgba(124, 60, 255, 0.18), transparent 66%);
+    }
+
+    .klar-saas26-x9q-introLayout {
+      display: grid;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .klar-saas26-x9q-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      border: 1px solid rgba(91, 93, 247, 0.18);
+      border-radius: 999px;
+      padding: 7px 11px 7px 8px;
+      color: var(--klar-saas26-x9q-ink-soft);
+      background: rgba(255, 255, 255, 0.68);
+      box-shadow: 0 8px 28px rgba(91, 93, 247, 0.08);
+      font-size: 0.86rem;
+      font-weight: 820;
+    }
+
+    .klar-saas26-x9q-eyebrowDot {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 35% 32%, #ffffff 0 18%, transparent 19%),
+        linear-gradient(135deg, var(--klar-saas26-x9q-accent), var(--klar-saas26-x9q-brand-3));
+      box-shadow: 0 0 0 6px rgba(18, 201, 155, 0.12);
+    }
+
+    .klar-saas26-x9q-headline {
+      max-width: 780px;
+      margin: 18px 0 0;
+      font-size: clamp(3rem, 11vw, 5.85rem);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+      font-weight: 920;
+    }
+
+    .klar-saas26-x9q-gradientText {
+      color: transparent;
+      background: linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-2) 48%, var(--klar-saas26-x9q-brand-3));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .klar-saas26-x9q-introCopy {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: clamp(1.08rem, 2vw, 1.3rem);
+    }
+
+    .klar-saas26-x9q-introActions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .klar-saas26-x9q-trustStrip {
+      display: grid;
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .klar-saas26-x9q-trustText {
+      margin: 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.92rem;
+      font-weight: 760;
+    }
+
+    .klar-saas26-x9q-logoRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .klar-saas26-x9q-logoPill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 999px;
+      padding: 9px 13px;
+      color: var(--klar-saas26-x9q-muted);
+      background: rgba(255, 255, 255, 0.68);
+      font-size: 0.88rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+    }
+
+    .klar-saas26-x9q-productScene {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .klar-saas26-x9q-dashboardShell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(91, 93, 247, 0.16);
+      border-radius: var(--klar-saas26-x9q-radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.72)),
+        radial-gradient(circle at 25% 0%, rgba(91, 93, 247, 0.18), transparent 36%),
+        radial-gradient(circle at 100% 28%, rgba(0, 184, 217, 0.14), transparent 35%);
+      box-shadow: var(--klar-saas26-x9q-shadow-lg);
+    }
+
+    .klar-saas26-x9q-dashboardTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--klar-saas26-x9q-line);
+      padding: 16px 18px;
+    }
+
+    .klar-saas26-x9q-windowDots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .klar-saas26-x9q-windowDots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--klar-saas26-x9q-line-strong);
+    }
+
+    .klar-saas26-x9q-windowDots span:nth-child(1) {
+      background: var(--klar-saas26-x9q-danger);
+    }
+
+    .klar-saas26-x9q-windowDots span:nth-child(2) {
+      background: var(--klar-saas26-x9q-warn);
+    }
+
+    .klar-saas26-x9q-windowDots span:nth-child(3) {
+      background: var(--klar-saas26-x9q-accent);
+    }
+
+    .klar-saas26-x9q-dashboardBadge {
+      border: 1px solid rgba(18, 201, 155, 0.25);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: #08785d;
+      background: rgba(18, 201, 155, 0.1);
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .klar-saas26-x9q-dashboardBody {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .klar-saas26-x9q-metricGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .klar-saas26-x9q-metricTile {
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.66);
+      box-shadow: 0 10px 30px rgba(11, 28, 54, 0.05);
+    }
+
+    .klar-saas26-x9q-metricLabel {
+      margin: 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .klar-saas26-x9q-metricValue {
+      margin: 6px 0 0;
+      font-size: 1.65rem;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      font-weight: 920;
+    }
+
+    .klar-saas26-x9q-metricDelta {
+      display: inline-flex;
+      margin-top: 10px;
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: #08785d;
+      background: rgba(18, 201, 155, 0.1);
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .klar-saas26-x9q-chartPanel {
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 24px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .klar-saas26-x9q-chartTopline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .klar-saas26-x9q-chartHeading {
+      margin: 0;
+      font-size: 0.94rem;
+      font-weight: 900;
+    }
+
+    .klar-saas26-x9q-chartTag {
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--klar-saas26-x9q-brand);
+      background: rgba(91, 93, 247, 0.09);
+      font-size: 0.74rem;
+      font-weight: 900;
+    }
+
+    .klar-saas26-x9q-barGraph {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: end;
+      gap: 8px;
+      height: 160px;
+    }
+
+    .klar-saas26-x9q-barGraph span {
+      min-height: 18px;
+      border-radius: 999px 999px 8px 8px;
+      background: linear-gradient(180deg, var(--klar-saas26-x9q-brand-3), var(--klar-saas26-x9q-brand));
+      box-shadow: 0 12px 24px rgba(91, 93, 247, 0.18);
+      transform-origin: bottom;
+      animation: klar-saas26-x9q-riseBars 900ms var(--klar-saas26-x9q-ease) both;
+    }
+
+    .klar-saas26-x9q-barGraph span:nth-child(1) { height: 42%; animation-delay: 80ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(2) { height: 58%; animation-delay: 140ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(3) { height: 46%; animation-delay: 200ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(4) { height: 70%; animation-delay: 260ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(5) { height: 62%; animation-delay: 320ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(6) { height: 82%; animation-delay: 380ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(7) { height: 74%; animation-delay: 440ms; }
+    .klar-saas26-x9q-barGraph span:nth-child(8) { height: 92%; animation-delay: 500ms; }
+
+    .klar-saas26-x9q-insightFloat {
+      position: absolute;
+      right: 8px;
+      bottom: 18px;
+      width: min(280px, calc(100% - 32px));
+      border: 1px solid rgba(91, 93, 247, 0.18);
+      border-radius: 24px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--klar-saas26-x9q-shadow-md);
+      backdrop-filter: blur(18px);
+      animation: klar-saas26-x9q-floatSoft 6s ease-in-out infinite;
+    }
+
+    .klar-saas26-x9q-insightKicker {
+      margin: 0 0 6px;
+      color: var(--klar-saas26-x9q-brand);
+      font-size: 0.78rem;
+      font-weight: 920;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .klar-saas26-x9q-insightCopy {
+      margin: 0;
+      color: var(--klar-saas26-x9q-ink-soft);
+      font-weight: 780;
+    }
+
+    .klar-saas26-x9q-statRibbon {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 18px 0 0;
+    }
+
+    .klar-saas26-x9q-statItem {
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 20px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+    }
+
+    .klar-saas26-x9q-statNumber {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      font-weight: 930;
+    }
+
+    .klar-saas26-x9q-statCaption {
+      display: block;
+      margin-top: 8px;
+      color: var(--klar-saas26-x9q-muted);
+      font-weight: 720;
+    }
+
+    .klar-saas26-x9q-pageSlice {
+      padding: 72px 0;
+    }
+
+    .klar-saas26-x9q-sliceHeader {
+      display: grid;
+      gap: 14px;
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .klar-saas26-x9q-centeredHeader {
+      margin-inline: auto;
+      text-align: center;
+      justify-items: center;
+    }
+
+    .klar-saas26-x9q-smallLabel {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid rgba(91, 93, 247, 0.16);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--klar-saas26-x9q-brand);
+      background: rgba(91, 93, 247, 0.07);
+      font-size: 0.78rem;
+      font-weight: 920;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .klar-saas26-x9q-sliceTitle {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 3.7rem);
+      line-height: 1;
+      letter-spacing: -0.065em;
+      font-weight: 930;
+    }
+
+    .klar-saas26-x9q-sliceCopy {
+      margin: 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 1.08rem;
+    }
+
+    .klar-saas26-x9q-featureMatrix {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .klar-saas26-x9q-featureTile {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 26px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+      transition: transform 220ms var(--klar-saas26-x9q-ease), box-shadow 220ms var(--klar-saas26-x9q-ease), border-color 220ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-featureTile::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      opacity: 0;
+      background: radial-gradient(circle at 20% 0%, rgba(91, 93, 247, 0.16), transparent 38%);
+      transition: opacity 220ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-featureTile:hover {
+      transform: translateY(-5px);
+      border-color: rgba(91, 93, 247, 0.26);
+      box-shadow: var(--klar-saas26-x9q-shadow-md);
+    }
+
+    .klar-saas26-x9q-featureTile:hover::before {
+      opacity: 1;
+    }
+
+    .klar-saas26-x9q-featureIcon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 17px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-3));
+      box-shadow: 0 16px 32px rgba(91, 93, 247, 0.22);
+    }
+
+    .klar-saas26-x9q-featureName {
+      margin: 20px 0 8px;
+      font-size: 1.15rem;
+      letter-spacing: -0.035em;
+      font-weight: 900;
+    }
+
+    .klar-saas26-x9q-featureText {
+      margin: 0;
+      color: var(--klar-saas26-x9q-muted);
+    }
+
+    .klar-saas26-x9q-benefitPanel {
+      overflow: hidden;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: var(--klar-saas26-x9q-radius-lg);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(91, 93, 247, 0.18), transparent 38%),
+        radial-gradient(circle at 100% 40%, rgba(0, 184, 217, 0.15), transparent 36%),
+        linear-gradient(135deg, #ffffff, #f6f8ff);
+      box-shadow: var(--klar-saas26-x9q-shadow-md);
+    }
+
+    .klar-saas26-x9q-benefitLayout {
+      display: grid;
+      gap: 28px;
+      padding: 28px;
+    }
+
+    .klar-saas26-x9q-checkList {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .klar-saas26-x9q-checkItem {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--klar-saas26-x9q-ink-soft);
+      font-weight: 750;
+    }
+
+    .klar-saas26-x9q-checkIcon {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      color: #ffffff;
+      background: var(--klar-saas26-x9q-accent);
+      font-size: 0.84rem;
+      font-weight: 950;
+    }
+
+    .klar-saas26-x9q-workflowMock {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .klar-saas26-x9q-flowRow {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 22px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 12px 30px rgba(11, 28, 54, 0.06);
+    }
+
+    .klar-saas26-x9q-flowNumber {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      color: var(--klar-saas26-x9q-brand);
+      background: rgba(91, 93, 247, 0.1);
+      font-weight: 930;
+    }
+
+    .klar-saas26-x9q-flowTitle {
+      margin: 0;
+      font-weight: 920;
+      letter-spacing: -0.025em;
+    }
+
+    .klar-saas26-x9q-flowCopy {
+      margin: 3px 0 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.92rem;
+    }
+
+    .klar-saas26-x9q-proofBand {
+      background:
+        linear-gradient(180deg, transparent, rgba(91, 93, 247, 0.05) 28%, transparent),
+        var(--klar-saas26-x9q-surface);
+    }
+
+    .klar-saas26-x9q-testimonialGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .klar-saas26-x9q-quoteTile {
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 26px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+    }
+
+    .klar-saas26-x9q-stars {
+      display: flex;
+      gap: 3px;
+      color: #f59e0b;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+
+    .klar-saas26-x9q-quoteText {
+      margin: 18px 0 22px;
+      color: var(--klar-saas26-x9q-ink-soft);
+      font-size: 1.04rem;
+      font-weight: 720;
+    }
+
+    .klar-saas26-x9q-personLine {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .klar-saas26-x9q-avatar {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-3));
+      font-weight: 920;
+    }
+
+    .klar-saas26-x9q-personName {
+      margin: 0;
+      font-weight: 920;
+      letter-spacing: -0.025em;
+    }
+
+    .klar-saas26-x9q-personRole {
+      margin: 2px 0 0;
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.9rem;
+    }
+
+    .klar-saas26-x9q-pricingControls {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 999px;
+      padding: 4px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+    }
+
+    .klar-saas26-x9q-cycleButton {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--klar-saas26-x9q-muted);
+      background: transparent;
+      font-weight: 880;
+      cursor: pointer;
+      transition: color 180ms var(--klar-saas26-x9q-ease), background 180ms var(--klar-saas26-x9q-ease), box-shadow 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-cycleButton[aria-pressed="true"] {
+      color: #ffffff;
+      background: var(--klar-saas26-x9q-ink);
+      box-shadow: 0 8px 18px rgba(11, 28, 54, 0.16);
+    }
+
+    .klar-saas26-x9q-cycleButton:focus-visible {
+      outline: 3px solid rgba(91, 93, 247, 0.28);
+      outline-offset: 3px;
+    }
+
+    .klar-saas26-x9q-priceGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .klar-saas26-x9q-priceTier {
+      position: relative;
+      display: grid;
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 28px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: var(--klar-saas26-x9q-shadow-sm);
+    }
+
+    .klar-saas26-x9q-priceTier[data-featured="true"] {
+      border-color: rgba(91, 93, 247, 0.35);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(91, 93, 247, 0.16), transparent 34%),
+        #ffffff;
+      box-shadow: var(--klar-saas26-x9q-shadow-lg);
+    }
+
+    .klar-saas26-x9q-popularFlag {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--klar-saas26-x9q-brand), var(--klar-saas26-x9q-brand-2));
+      font-size: 0.76rem;
+      font-weight: 920;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .klar-saas26-x9q-tierName {
+      margin: 18px 0 6px;
+      font-size: 1.2rem;
+      letter-spacing: -0.035em;
+      font-weight: 930;
+    }
+
+    .klar-saas26-x9q-tierBlurb {
+      min-height: 48px;
+      margin: 0;
+      color: var(--klar-saas26-x9q-muted);
+    }
+
+    .klar-saas26-x9q-priceLine {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-top: 22px;
+    }
+
+    .klar-saas26-x9q-priceAmount {
+      font-size: 3.05rem;
+      line-height: 1;
+      letter-spacing: -0.07em;
+      font-weight: 940;
+    }
+
+    .klar-saas26-x9q-pricePeriod {
+      color: var(--klar-saas26-x9q-muted);
+      font-weight: 780;
+    }
+
+    .klar-saas26-x9q-tierList {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .klar-saas26-x9q-tierItem {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--klar-saas26-x9q-ink-soft);
+      font-weight: 720;
+    }
+
+    .klar-saas26-x9q-tierTick {
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      color: var(--klar-saas26-x9q-accent);
+      background: rgba(18, 201, 155, 0.12);
+      font-size: 0.78rem;
+      font-weight: 950;
+    }
+
+    .klar-saas26-x9q-faqLayout {
+      display: grid;
+      gap: 12px;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .klar-saas26-x9q-faqItem {
+      border: 1px solid var(--klar-saas26-x9q-line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 28px rgba(11, 28, 54, 0.05);
+      overflow: hidden;
+    }
+
+    .klar-saas26-x9q-faqTrigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: 100%;
+      border: 0;
+      padding: 20px;
+      color: var(--klar-saas26-x9q-ink);
+      background: transparent;
+      text-align: left;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .klar-saas26-x9q-faqTrigger:focus-visible {
+      outline: 3px solid rgba(91, 93, 247, 0.28);
+      outline-offset: -3px;
+    }
+
+    .klar-saas26-x9q-faqIcon {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      color: var(--klar-saas26-x9q-brand);
+      background: rgba(91, 93, 247, 0.09);
+      transition: transform 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-faqTrigger[aria-expanded="true"] .klar-saas26-x9q-faqIcon {
+      transform: rotate(45deg);
+    }
+
+    .klar-saas26-x9q-faqAnswer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 220ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-faqAnswer[data-expanded="true"] {
+      grid-template-rows: 1fr;
+    }
+
+    .klar-saas26-x9q-faqInner {
+      overflow: hidden;
+    }
+
+    .klar-saas26-x9q-faqText {
+      margin: 0;
+      padding: 0 20px 20px;
+      color: var(--klar-saas26-x9q-muted);
+    }
+
+    .klar-saas26-x9q-finalCta {
+      padding: 80px 0;
+    }
+
+    .klar-saas26-x9q-finalPanel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--klar-saas26-x9q-radius-lg);
+      padding: 34px 24px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 90% 40%, rgba(0, 184, 217, 0.35), transparent 34%),
+        linear-gradient(135deg, #14174a, #5b5df7 48%, #7c3cff);
+      box-shadow: var(--klar-saas26-x9q-shadow-lg);
+      text-align: center;
+    }
+
+    .klar-saas26-x9q-finalPanel::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -55% -20%;
+      height: 260px;
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.22), transparent 62%);
+      pointer-events: none;
+    }
+
+    .klar-saas26-x9q-finalTitle {
+      position: relative;
+      margin: 0;
+      font-size: clamp(2.1rem, 6vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -0.07em;
+      font-weight: 940;
+    }
+
+    .klar-saas26-x9q-finalCopy {
+      position: relative;
+      max-width: 680px;
+      margin: 18px auto 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.1rem;
+    }
+
+    .klar-saas26-x9q-finalActions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .klar-saas26-x9q-lightAction {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 14px 18px;
+      color: var(--klar-saas26-x9q-ink);
+      background: #ffffff;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+      transition: transform 180ms var(--klar-saas26-x9q-ease), box-shadow 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-lightAction:hover,
+    .klar-saas26-x9q-lightAction:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 52px rgba(0, 0, 0, 0.18);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-ghostLightAction {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 14px 18px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      font-weight: 900;
+      transition: transform 180ms var(--klar-saas26-x9q-ease), background 180ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-ghostLightAction:hover,
+    .klar-saas26-x9q-ghostLightAction:focus-visible {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.16);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-footerArea {
+      border-top: 1px solid var(--klar-saas26-x9q-line);
+      padding: 34px 0;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .klar-saas26-x9q-footerGrid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .klar-saas26-x9q-footerCopy {
+      max-width: 390px;
+      margin: 14px 0 0;
+      color: var(--klar-saas26-x9q-muted);
+    }
+
+    .klar-saas26-x9q-footerColumns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .klar-saas26-x9q-footerHeading {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      font-weight: 920;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .klar-saas26-x9q-footerLinks {
+      display: grid;
+      gap: 8px;
+    }
+
+    .klar-saas26-x9q-footerLink {
+      color: var(--klar-saas26-x9q-muted);
+      font-weight: 700;
+    }
+
+    .klar-saas26-x9q-footerLink:hover,
+    .klar-saas26-x9q-footerLink:focus-visible {
+      color: var(--klar-saas26-x9q-brand);
+      outline: none;
+    }
+
+    .klar-saas26-x9q-legalLine {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--klar-saas26-x9q-line);
+      color: var(--klar-saas26-x9q-muted);
+      font-size: 0.9rem;
+    }
+
+    .klar-saas26-x9q-revealNode {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms var(--klar-saas26-x9q-ease), transform 700ms var(--klar-saas26-x9q-ease);
+    }
+
+    .klar-saas26-x9q-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes klar-saas26-x9q-riseBars {
+      from {
+        transform: scaleY(0.18);
+        opacity: 0.45;
+      }
+      to {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes klar-saas26-x9q-floatSoft {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .klar-saas26-x9q-revealNode {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (min-width: 560px) {
+      .klar-saas26-x9q-metricGrid,
+      .klar-saas26-x9q-statRibbon {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .klar-saas26-x9q-finalPanel {
+        padding: 54px 34px;
+      }
+    }
+
+    @media (min-width: 760px) {
+      .klar-saas26-x9q-featureMatrix,
+      .klar-saas26-x9q-testimonialGrid,
+      .klar-saas26-x9q-priceGrid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .klar-saas26-x9q-benefitLayout {
+        grid-template-columns: 0.95fr 1.05fr;
+        padding: 42px;
+      }
+
+      .klar-saas26-x9q-footerGrid {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: start;
+      }
+
+      .klar-saas26-x9q-footerColumns {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 980px) {
+      .klar-saas26-x9q-desktopLinks,
+      .klar-saas26-x9q-navActions {
+        display: flex;
+      }
+
+      .klar-saas26-x9q-menuButton,
+      .klar-saas26-x9q-mobilePanel {
+        display: none;
+      }
+
+      .klar-saas26-x9q-introBand {
+        padding: 94px 0 72px;
+      }
+
+      .klar-saas26-x9q-introLayout {
+        grid-template-columns: minmax(0, 1.02fr) minmax(400px, 0.98fr);
+        gap: 46px;
+      }
+
+      .klar-saas26-x9q-pageSlice {
+        padding: 94px 0;
+      }
+
+      .klar-saas26-x9q-priceTier[data-featured="true"] {
+        transform: translateY(-12px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="klar-saas26-x9q-skipLink" href="#klar-saas26-x9q-mainArea">Skip to content</a>
+
+  <div class="klar-saas26-x9q-pageFrame">
+    <header class="klar-saas26-x9q-topbar" id="klar-saas26-x9q-topbar">
+      <nav class="klar-saas26-x9q-widthRail klar-saas26-x9q-navGrid" aria-label="Primary navigation">
+        <a class="klar-saas26-x9q-markLink" href="#" aria-label="Lumora home">
+          <span class="klar-saas26-x9q-markSymbol" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2.8 20.7 8v8L12 21.2 3.3 16V8L12 2.8Z" stroke="currentColor" stroke-width="2" />
+              <path d="M12 7.2 16.8 10v4L12 16.8 7.2 14v-4L12 7.2Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="klar-saas26-x9q-markName">Lumora</span>
+        </a>
+
+        <div class="klar-saas26-x9q-desktopLinks">
+          <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-features">Features</a>
+          <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-benefits">Benefits</a>
+          <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-proof">Customers</a>
+          <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-pricing">Pricing</a>
+          <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-faq">FAQ</a>
+        </div>
+
+        <div class="klar-saas26-x9q-navActions">
+          <a class="klar-saas26-x9q-textAction" href="#klar-saas26-x9q-footer">Sign in</a>
+          <a class="klar-saas26-x9q-solidAction" href="#klar-saas26-x9q-pricing">Start free trial</a>
+        </div>
+
+        <button class="klar-saas26-x9q-menuButton" id="klar-saas26-x9q-menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="klar-saas26-x9q-mobilePanel">
+          <span class="klar-saas26-x9q-menuBars" aria-hidden="true"></span>
+        </button>
       </nav>
 
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Switch to dark theme" aria-pressed="false">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 4V2m0 20v-2M4 12H2m20 0h-2m-2.34-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 14.2A8.5 8.5 0 0 1 9.8 3a8.5 8.5 0 1 0 11.2 11.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        <a class="btn btn-secondary mobile-hidden" href="#pricing">View plans</a>
-        <a class="btn btn-primary mobile-hidden" href="#cta">Start free</a>
-        <button class="nav-toggle" type="button" data-nav-toggle="" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
-          <span class="nav-toggle-line" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </header><main></main><footer class="site-footer" aria-labelledby="footer-title">
-    <div class="container-wide">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="#hero" aria-label="NexaFlow home">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" role="img">
-                <path d="M5 12.7C5 8.4 8.4 5 12.7 5H19v6.3c0 4.3-3.4 7.7-7.7 7.7H5v-6.3Z" fill="currentColor" opacity=".92"></path>
-                <path d="M9 14.8 15.8 8M14.8 8h1v1" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </span>
-            <span class="brand-name">NexaFlow</span>
-          </a>
-          <p id="footer-title">Premium AI workflow automation for revenue and operations teams that want measurable leverage.</p>
-          <div class="social-links" aria-label="Social links">
-            <a href="#hero" aria-label="NexaFlow on LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 10v8M7 7v.01M11 18v-4.5A3.5 3.5 0 0 1 14.5 10v0A3.5 3.5 0 0 1 18 13.5V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
-            <a href="#hero" aria-label="NexaFlow on X">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="m4 4 16 16M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
-            <a href="#hero" aria-label="NexaFlow community">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M16 11a4 4 0 1 0-8 0v1a4 4 0 0 0 8 0v-1Z" stroke="currentColor" stroke-width="2"></path>
-                <path d="M4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h2>Product</h2>
-            <ul class="footer-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#benefits">Benefits</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Customers</h2>
-            <ul class="footer-links">
-              <li><a href="#testimonials">Stories</a></li>
-              <li><a href="#benefits">Results</a></li>
-              <li><a href="#cta">Start trial</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Resources</h2>
-            <ul class="footer-links">
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#features">Platform tour</a></li>
-              <li><a href="#hero">Product preview</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h2>Company</h2>
-            <ul class="footer-links">
-              <li><a href="#hero">About</a></li>
-              <li><a href="#pricing">Plans</a></li>
-              <li><a href="#cta">Contact sales</a></li>
-            </ul>
+      <div class="klar-saas26-x9q-mobilePanel" id="klar-saas26-x9q-mobilePanel" data-open="false">
+        <div class="klar-saas26-x9q-mobilePanelInner">
+          <div class="klar-saas26-x9q-widthRail klar-saas26-x9q-mobileLinkStack">
+            <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-features">Features</a>
+            <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-benefits">Benefits</a>
+            <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-proof">Customers</a>
+            <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-pricing">Pricing</a>
+            <a class="klar-saas26-x9q-navAnchor" href="#klar-saas26-x9q-faq">FAQ</a>
+            <a class="klar-saas26-x9q-textAction" href="#klar-saas26-x9q-footer">Sign in</a>
+            <a class="klar-saas26-x9q-solidAction" href="#klar-saas26-x9q-pricing">Start free trial</a>
           </div>
         </div>
       </div>
+    </header>
 
-      <div class="footer-bottom">
-        <p>© <span data-current-year="">2026</span> NexaFlow. All rights reserved.</p>
-        <p>Fast, accessible, and built with vanilla web standards.</p>
+    <main id="klar-saas26-x9q-mainArea">
+      <section class="klar-saas26-x9q-introBand" aria-labelledby="klar-saas26-x9q-introTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-introLayout">
+            <div class="klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-eyebrow">
+                <span class="klar-saas26-x9q-eyebrowDot" aria-hidden="true"></span>
+                AI revenue ops built for 2026 growth teams
+              </div>
+
+              <h1 class="klar-saas26-x9q-headline" id="klar-saas26-x9q-introTitle">
+                Turn every signal into <span class="klar-saas26-x9q-gradientText">predictable revenue.</span>
+              </h1>
+
+              <p class="klar-saas26-x9q-introCopy">
+                Lumora unifies customer data, forecasting, playbooks, and automation so your team can prioritize the right accounts, close faster, and scale without operational chaos.
+              </p>
+
+              <div class="klar-saas26-x9q-introActions" aria-label="Hero actions">
+                <a class="klar-saas26-x9q-solidAction" href="#klar-saas26-x9q-pricing">Start 14-day trial</a>
+                <a class="klar-saas26-x9q-outlineAction" href="#klar-saas26-x9q-proof">See customer results</a>
+              </div>
+
+              <div class="klar-saas26-x9q-trustStrip" aria-label="Trusted by companies">
+                <p class="klar-saas26-x9q-trustText">Trusted by 4,800+ high-growth teams</p>
+                <div class="klar-saas26-x9q-logoRow">
+                  <span class="klar-saas26-x9q-logoPill">Northstar</span>
+                  <span class="klar-saas26-x9q-logoPill">VertexAI</span>
+                  <span class="klar-saas26-x9q-logoPill">OrbitPay</span>
+                  <span class="klar-saas26-x9q-logoPill">SlateWorks</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="klar-saas26-x9q-productScene klar-saas26-x9q-revealNode" aria-label="Lumora analytics preview">
+              <div class="klar-saas26-x9q-dashboardShell">
+                <div class="klar-saas26-x9q-dashboardTop">
+                  <div class="klar-saas26-x9q-windowDots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="klar-saas26-x9q-dashboardBadge">Live forecast accuracy 94%</span>
+                </div>
+
+                <div class="klar-saas26-x9q-dashboardBody">
+                  <div class="klar-saas26-x9q-metricGrid">
+                    <article class="klar-saas26-x9q-metricTile">
+                      <p class="klar-saas26-x9q-metricLabel">Pipeline influenced</p>
+                      <p class="klar-saas26-x9q-metricValue">$8.7M</p>
+                      <span class="klar-saas26-x9q-metricDelta">+32%</span>
+                    </article>
+                    <article class="klar-saas26-x9q-metricTile">
+                      <p class="klar-saas26-x9q-metricLabel">Cycle reduction</p>
+                      <p class="klar-saas26-x9q-metricValue">21d</p>
+                      <span class="klar-saas26-x9q-metricDelta">-28%</span>
+                    </article>
+                    <article class="klar-saas26-x9q-metricTile">
+                      <p class="klar-saas26-x9q-metricLabel">Expansion alerts</p>
+                      <p class="klar-saas26-x9q-metricValue">143</p>
+                      <span class="klar-saas26-x9q-metricDelta">+46%</span>
+                    </article>
+                  </div>
+
+                  <div class="klar-saas26-x9q-chartPanel">
+                    <div class="klar-saas26-x9q-chartTopline">
+                      <h2 class="klar-saas26-x9q-chartHeading">Revenue momentum</h2>
+                      <span class="klar-saas26-x9q-chartTag">AI prioritized</span>
+                    </div>
+                    <div class="klar-saas26-x9q-barGraph" aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="klar-saas26-x9q-insightFloat">
+                <p class="klar-saas26-x9q-insightKicker">Next best action</p>
+                <p class="klar-saas26-x9q-insightCopy">Contact finance champion at Acme today. Contract risk dropped after product adoption spike.</p>
+              </aside>
+            </div>
+          </div>
+
+          <div class="klar-saas26-x9q-statRibbon">
+            <div class="klar-saas26-x9q-statItem klar-saas26-x9q-revealNode">
+              <span class="klar-saas26-x9q-statNumber">38%</span>
+              <span class="klar-saas26-x9q-statCaption">higher win rates in 90 days</span>
+            </div>
+            <div class="klar-saas26-x9q-statItem klar-saas26-x9q-revealNode">
+              <span class="klar-saas26-x9q-statNumber">11h</span>
+              <span class="klar-saas26-x9q-statCaption">saved per rep every week</span>
+            </div>
+            <div class="klar-saas26-x9q-statItem klar-saas26-x9q-revealNode">
+              <span class="klar-saas26-x9q-statNumber">4.9/5</span>
+              <span class="klar-saas26-x9q-statCaption">average customer rating</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-pageSlice" id="klar-saas26-x9q-features" aria-labelledby="klar-saas26-x9q-featuresTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-sliceHeader klar-saas26-x9q-centeredHeader klar-saas26-x9q-revealNode">
+            <span class="klar-saas26-x9q-smallLabel">Platform</span>
+            <h2 class="klar-saas26-x9q-sliceTitle" id="klar-saas26-x9q-featuresTitle">Everything your revenue team needs in one workspace.</h2>
+            <p class="klar-saas26-x9q-sliceCopy">Replace disconnected dashboards and manual follow-ups with a single operating system designed for speed, clarity, and measurable outcomes.</p>
+          </div>
+
+          <div class="klar-saas26-x9q-featureMatrix">
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">✦</div>
+              <h3 class="klar-saas26-x9q-featureName">Signal intelligence</h3>
+              <p class="klar-saas26-x9q-featureText">Surface buying intent, usage spikes, stakeholder changes, and churn risk before they become missed opportunities.</p>
+            </article>
+
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">⌁</div>
+              <h3 class="klar-saas26-x9q-featureName">Automated playbooks</h3>
+              <p class="klar-saas26-x9q-featureText">Trigger tailored workflows for outbound, onboarding, renewals, expansion, and executive escalation.</p>
+            </article>
+
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">◈</div>
+              <h3 class="klar-saas26-x9q-featureName">Forecast command</h3>
+              <p class="klar-saas26-x9q-featureText">Get board-ready forecasts with explainable AI, confidence scoring, and deal-level inspection trails.</p>
+            </article>
+
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">↗</div>
+              <h3 class="klar-saas26-x9q-featureName">Expansion mapping</h3>
+              <p class="klar-saas26-x9q-featureText">Identify product-qualified expansion paths and route the right conversation to the right owner instantly.</p>
+            </article>
+
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">◎</div>
+              <h3 class="klar-saas26-x9q-featureName">Clean CRM sync</h3>
+              <p class="klar-saas26-x9q-featureText">Keep your CRM accurate with bi-directional sync, duplicate prevention, enrichment, and field governance.</p>
+            </article>
+
+            <article class="klar-saas26-x9q-featureTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-featureIcon" aria-hidden="true">✓</div>
+              <h3 class="klar-saas26-x9q-featureName">Executive reporting</h3>
+              <p class="klar-saas26-x9q-featureText">Share polished revenue stories with live metrics, variance explanations, and team accountability built in.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-pageSlice" id="klar-saas26-x9q-benefits" aria-labelledby="klar-saas26-x9q-benefitsTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-benefitPanel klar-saas26-x9q-revealNode">
+            <div class="klar-saas26-x9q-benefitLayout">
+              <div>
+                <span class="klar-saas26-x9q-smallLabel">Why teams switch</span>
+                <h2 class="klar-saas26-x9q-sliceTitle" id="klar-saas26-x9q-benefitsTitle">Less admin. Better timing. More closed revenue.</h2>
+                <p class="klar-saas26-x9q-sliceCopy">Lumora gives every go-to-market leader the operating leverage to scale pipeline quality without adding process drag.</p>
+
+                <ul class="klar-saas26-x9q-checkList">
+                  <li class="klar-saas26-x9q-checkItem">
+                    <span class="klar-saas26-x9q-checkIcon" aria-hidden="true">✓</span>
+                    <span>Route teams toward the accounts most likely to buy, renew, or expand.</span>
+                  </li>
+                  <li class="klar-saas26-x9q-checkItem">
+                    <span class="klar-saas26-x9q-checkIcon" aria-hidden="true">✓</span>
+                    <span>Standardize best-practice execution without forcing reps into rigid scripts.</span>
+                  </li>
+                  <li class="klar-saas26-x9q-checkItem">
+                    <span class="klar-saas26-x9q-checkIcon" aria-hidden="true">✓</span>
+                    <span>Turn fragmented data into trusted board, finance, and sales leadership views.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="klar-saas26-x9q-workflowMock" aria-label="Workflow preview">
+                <article class="klar-saas26-x9q-flowRow">
+                  <span class="klar-saas26-x9q-flowNumber">01</span>
+                  <div>
+                    <h3 class="klar-saas26-x9q-flowTitle">Detect intent</h3>
+                    <p class="klar-saas26-x9q-flowCopy">Website, product, CRM, and support signals are unified automatically.</p>
+                  </div>
+                </article>
+                <article class="klar-saas26-x9q-flowRow">
+                  <span class="klar-saas26-x9q-flowNumber">02</span>
+                  <div>
+                    <h3 class="klar-saas26-x9q-flowTitle">Score priority</h3>
+                    <p class="klar-saas26-x9q-flowCopy">AI ranks revenue impact, timing, stakeholders, and risk.</p>
+                  </div>
+                </article>
+                <article class="klar-saas26-x9q-flowRow">
+                  <span class="klar-saas26-x9q-flowNumber">03</span>
+                  <div>
+                    <h3 class="klar-saas26-x9q-flowTitle">Launch action</h3>
+                    <p class="klar-saas26-x9q-flowCopy">Playbooks assign owners, draft messages, and update reporting.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-pageSlice klar-saas26-x9q-proofBand" id="klar-saas26-x9q-proof" aria-labelledby="klar-saas26-x9q-proofTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-sliceHeader klar-saas26-x9q-centeredHeader klar-saas26-x9q-revealNode">
+            <span class="klar-saas26-x9q-smallLabel">Social proof</span>
+            <h2 class="klar-saas26-x9q-sliceTitle" id="klar-saas26-x9q-proofTitle">Revenue leaders trust Lumora to make growth repeatable.</h2>
+          </div>
+
+          <div class="klar-saas26-x9q-testimonialGrid">
+            <article class="klar-saas26-x9q-quoteTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-stars" aria-label="Five stars">★★★★★</div>
+              <p class="klar-saas26-x9q-quoteText">“Lumora gave our team a single source of truth and turned forecasting from a weekly debate into a confident operating rhythm.”</p>
+              <div class="klar-saas26-x9q-personLine">
+                <span class="klar-saas26-x9q-avatar" aria-hidden="true">AM</span>
+                <div>
+                  <p class="klar-saas26-x9q-personName">Ari Morgan</p>
+                  <p class="klar-saas26-x9q-personRole">VP Revenue, Northstar</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="klar-saas26-x9q-quoteTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-stars" aria-label="Five stars">★★★★★</div>
+              <p class="klar-saas26-x9q-quoteText">“Within one quarter, our reps were spending more time in high-value conversations and far less time chasing incomplete CRM fields.”</p>
+              <div class="klar-saas26-x9q-personLine">
+                <span class="klar-saas26-x9q-avatar" aria-hidden="true">JL</span>
+                <div>
+                  <p class="klar-saas26-x9q-personName">Jules Lee</p>
+                  <p class="klar-saas26-x9q-personRole">Chief Customer Officer, OrbitPay</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="klar-saas26-x9q-quoteTile klar-saas26-x9q-revealNode">
+              <div class="klar-saas26-x9q-stars" aria-label="Five stars">★★★★★</div>
+              <p class="klar-saas26-x9q-quoteText">“The expansion alerts alone paid for the platform. Lumora found opportunities we had buried across product usage and support data.”</p>
+              <div class="klar-saas26-x9q-personLine">
+                <span class="klar-saas26-x9q-avatar" aria-hidden="true">RK</span>
+                <div>
+                  <p class="klar-saas26-x9q-personName">Rina Kapoor</p>
+                  <p class="klar-saas26-x9q-personRole">COO, SlateWorks</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-pageSlice" id="klar-saas26-x9q-pricing" aria-labelledby="klar-saas26-x9q-pricingTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-sliceHeader klar-saas26-x9q-centeredHeader klar-saas26-x9q-revealNode">
+            <span class="klar-saas26-x9q-smallLabel">Pricing</span>
+            <h2 class="klar-saas26-x9q-sliceTitle" id="klar-saas26-x9q-pricingTitle">Start lean. Scale when you are ready.</h2>
+            <p class="klar-saas26-x9q-sliceCopy">Transparent plans for modern revenue teams. No implementation surprises, no hidden platform fees.</p>
+
+            <div class="klar-saas26-x9q-pricingControls" aria-label="Billing cycle">
+              <button class="klar-saas26-x9q-cycleButton" type="button" data-klar-saas26-x9q-cycle="monthly" aria-pressed="true">Monthly</button>
+              <button class="klar-saas26-x9q-cycleButton" type="button" data-klar-saas26-x9q-cycle="annual" aria-pressed="false">Annual · save 20%</button>
+            </div>
+          </div>
+
+          <div class="klar-saas26-x9q-priceGrid">
+            <article class="klar-saas26-x9q-priceTier klar-saas26-x9q-revealNode">
+              <span class="klar-saas26-x9q-popularFlag">Starter</span>
+              <h3 class="klar-saas26-x9q-tierName">Launch</h3>
+              <p class="klar-saas26-x9q-tierBlurb">For early teams building their first scalable revenue motion.</p>
+              <div class="klar-saas26-x9q-priceLine">
+                <span class="klar-saas26-x9q-priceAmount" data-klar-saas26-x9q-monthly="$49" data-klar-saas26-x9q-annual="$39">$49</span>
+                <span class="klar-saas26-x9q-pricePeriod">/seat/mo</span>
+              </div>
+              <ul class="klar-saas26-x9q-tierList">
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Unified account timeline</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Basic automation playbooks</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>CRM sync and enrichment</span></li>
+              </ul>
+              <a class="klar-saas26-x9q-subtleAction" href="#klar-saas26-x9q-final">Choose Launch</a>
+            </article>
+
+            <article class="klar-saas26-x9q-priceTier klar-saas26-x9q-revealNode" data-featured="true">
+              <span class="klar-saas26-x9q-popularFlag">Most popular</span>
+              <h3 class="klar-saas26-x9q-tierName">Scale</h3>
+              <p class="klar-saas26-x9q-tierBlurb">For growing teams that need AI priority scoring and forecast confidence.</p>
+              <div class="klar-saas26-x9q-priceLine">
+                <span class="klar-saas26-x9q-priceAmount" data-klar-saas26-x9q-monthly="$89" data-klar-saas26-x9q-annual="$71">$89</span>
+                <span class="klar-saas26-x9q-pricePeriod">/seat/mo</span>
+              </div>
+              <ul class="klar-saas26-x9q-tierList">
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Everything in Launch</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>AI forecast command center</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Advanced revenue playbooks</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Slack and email orchestration</span></li>
+              </ul>
+              <a class="klar-saas26-x9q-solidAction" href="#klar-saas26-x9q-final">Start free trial</a>
+            </article>
+
+            <article class="klar-saas26-x9q-priceTier klar-saas26-x9q-revealNode">
+              <span class="klar-saas26-x9q-popularFlag">Enterprise</span>
+              <h3 class="klar-saas26-x9q-tierName">Command</h3>
+              <p class="klar-saas26-x9q-tierBlurb">For multi-region revenue organizations with custom governance needs.</p>
+              <div class="klar-saas26-x9q-priceLine">
+                <span class="klar-saas26-x9q-priceAmount" data-klar-saas26-x9q-monthly="Custom" data-klar-saas26-x9q-annual="Custom">Custom</span>
+                <span class="klar-saas26-x9q-pricePeriod">pricing</span>
+              </div>
+              <ul class="klar-saas26-x9q-tierList">
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Everything in Scale</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>Custom data warehouse sync</span></li>
+                <li class="klar-saas26-x9q-tierItem"><span class="klar-saas26-x9q-tierTick">✓</span><span>SSO, audit logs, and governance</span></li>
+              </ul>
+              <a class="klar-saas26-x9q-subtleAction" href="#klar-saas26-x9q-final">Talk to sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-pageSlice" id="klar-saas26-x9q-faq" aria-labelledby="klar-saas26-x9q-faqTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-sliceHeader klar-saas26-x9q-centeredHeader klar-saas26-x9q-revealNode">
+            <span class="klar-saas26-x9q-smallLabel">FAQ</span>
+            <h2 class="klar-saas26-x9q-sliceTitle" id="klar-saas26-x9q-faqTitle">Questions before you start?</h2>
+          </div>
+
+          <div class="klar-saas26-x9q-faqLayout">
+            <article class="klar-saas26-x9q-faqItem klar-saas26-x9q-revealNode">
+              <button class="klar-saas26-x9q-faqTrigger" type="button" aria-expanded="false" aria-controls="klar-saas26-x9q-faqAnswerOne">
+                How long does implementation take?
+                <span class="klar-saas26-x9q-faqIcon" aria-hidden="true">+</span>
+              </button>
+              <div class="klar-saas26-x9q-faqAnswer" id="klar-saas26-x9q-faqAnswerOne" data-expanded="false">
+                <div class="klar-saas26-x9q-faqInner">
+                  <p class="klar-saas26-x9q-faqText">Most teams connect their CRM and core data sources in under a day. Larger enterprise rollouts typically launch in two to four weeks with guided onboarding.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="klar-saas26-x9q-faqItem klar-saas26-x9q-revealNode">
+              <button class="klar-saas26-x9q-faqTrigger" type="button" aria-expanded="false" aria-controls="klar-saas26-x9q-faqAnswerTwo">
+                Does Lumora replace our CRM?
+                <span class="klar-saas26-x9q-faqIcon" aria-hidden="true">+</span>
+              </button>
+              <div class="klar-saas26-x9q-faqAnswer" id="klar-saas26-x9q-faqAnswerTwo" data-expanded="false">
+                <div class="klar-saas26-x9q-faqInner">
+                  <p class="klar-saas26-x9q-faqText">No. Lumora sits on top of your CRM and data stack, making them cleaner, smarter, and easier for teams to act on.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="klar-saas26-x9q-faqItem klar-saas26-x9q-revealNode">
+              <button class="klar-saas26-x9q-faqTrigger" type="button" aria-expanded="false" aria-controls="klar-saas26-x9q-faqAnswerThree">
+                Is customer data used to train public AI models?
+                <span class="klar-saas26-x9q-faqIcon" aria-hidden="true">+</span>
+              </button>
+              <div class="klar-saas26-x9q-faqAnswer" id="klar-saas26-x9q-faqAnswerThree" data-expanded="false">
+                <div class="klar-saas26-x9q-faqInner">
+                  <p class="klar-saas26-x9q-faqText">Never. Customer data remains isolated to your workspace and is not used to train public models. Enterprise plans include advanced retention and governance controls.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="klar-saas26-x9q-faqItem klar-saas26-x9q-revealNode">
+              <button class="klar-saas26-x9q-faqTrigger" type="button" aria-expanded="false" aria-controls="klar-saas26-x9q-faqAnswerFour">
+                Can we try Lumora before paying?
+                <span class="klar-saas26-x9q-faqIcon" aria-hidden="true">+</span>
+              </button>
+              <div class="klar-saas26-x9q-faqAnswer" id="klar-saas26-x9q-faqAnswerFour" data-expanded="false">
+                <div class="klar-saas26-x9q-faqInner">
+                  <p class="klar-saas26-x9q-faqText">Yes. Launch and Scale plans include a 14-day free trial with sample playbooks, onboarding support, and no credit card required.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="klar-saas26-x9q-finalCta" id="klar-saas26-x9q-final" aria-labelledby="klar-saas26-x9q-finalTitle">
+        <div class="klar-saas26-x9q-widthRail">
+          <div class="klar-saas26-x9q-finalPanel klar-saas26-x9q-revealNode">
+            <h2 class="klar-saas26-x9q-finalTitle" id="klar-saas26-x9q-finalTitle">Ready to make revenue predictable?</h2>
+            <p class="klar-saas26-x9q-finalCopy">Join thousands of teams replacing guesswork with AI-powered focus, execution, and forecasting.</p>
+            <div class="klar-saas26-x9q-finalActions">
+              <a class="klar-saas26-x9q-lightAction" href="mailto:sales@example.com?subject=Start%20Lumora%20Trial">Start free trial</a>
+              <a class="klar-saas26-x9q-ghostLightAction" href="mailto:sales@example.com?subject=Book%20Lumora%20Demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="klar-saas26-x9q-footerArea" id="klar-saas26-x9q-footer">
+      <div class="klar-saas26-x9q-widthRail">
+        <div class="klar-saas26-x9q-footerGrid">
+          <div>
+            <a class="klar-saas26-x9q-markLink" href="#" aria-label="Lumora home">
+              <span class="klar-saas26-x9q-markSymbol" aria-hidden="true">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2.8 20.7 8v8L12 21.2 3.3 16V8L12 2.8Z" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 7.2 16.8 10v4L12 16.8 7.2 14v-4L12 7.2Z" fill="currentColor" />
+                </svg>
+              </span>
+              <span class="klar-saas26-x9q-markName">Lumora</span>
+            </a>
+            <p class="klar-saas26-x9q-footerCopy">The AI revenue operations platform for teams that want clearer priorities, cleaner data, and faster growth.</p>
+          </div>
+
+          <div class="klar-saas26-x9q-footerColumns">
+            <div>
+              <h2 class="klar-saas26-x9q-footerHeading">Product</h2>
+              <div class="klar-saas26-x9q-footerLinks">
+                <a class="klar-saas26-x9q-footerLink" href="#klar-saas26-x9q-features">Features</a>
+                <a class="klar-saas26-x9q-footerLink" href="#klar-saas26-x9q-pricing">Pricing</a>
+                <a class="klar-saas26-x9q-footerLink" href="#klar-saas26-x9q-faq">FAQ</a>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="klar-saas26-x9q-footerHeading">Company</h2>
+              <div class="klar-saas26-x9q-footerLinks">
+                <a class="klar-saas26-x9q-footerLink" href="#klar-saas26-x9q-proof">Customers</a>
+                <a class="klar-saas26-x9q-footerLink" href="mailto:careers@example.com">Careers</a>
+                <a class="klar-saas26-x9q-footerLink" href="mailto:press@example.com">Press</a>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="klar-saas26-x9q-footerHeading">Contact</h2>
+              <div class="klar-saas26-x9q-footerLinks">
+                <a class="klar-saas26-x9q-footerLink" href="mailto:sales@example.com">Sales</a>
+                <a class="klar-saas26-x9q-footerLink" href="mailto:support@example.com">Support</a>
+                <a class="klar-saas26-x9q-footerLink" href="mailto:security@example.com">Security</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="klar-saas26-x9q-legalLine">
+          <span>© <span id="klar-saas26-x9q-year">2026</span> Lumora Labs. All rights reserved.</span>
+          <span>Privacy · Terms · Security</span>
+        </div>
       </div>
-    </div>
-  </footer><script src="/script.js"></script></body></html>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var klarSaas26X9qTopbar = document.getElementById("klar-saas26-x9q-topbar");
+      var klarSaas26X9qMenuButton = document.getElementById("klar-saas26-x9q-menuButton");
+      var klarSaas26X9qMobilePanel = document.getElementById("klar-saas26-x9q-mobilePanel");
+      var klarSaas26X9qYear = document.getElementById("klar-saas26-x9q-year");
+
+      function klarSaas26X9qUpdateTopbar() {
+        if (!klarSaas26X9qTopbar) return;
+        klarSaas26X9qTopbar.classList.toggle("klar-saas26-x9q-topbarScrolled", window.scrollY > 8);
+      }
+
+      function klarSaas26X9qSetMenu(klarSaas26X9qOpen) {
+        if (!klarSaas26X9qMenuButton || !klarSaas26X9qMobilePanel) return;
+        klarSaas26X9qMenuButton.setAttribute("aria-expanded", String(klarSaas26X9qOpen));
+        klarSaas26X9qMenuButton.setAttribute("aria-label", klarSaas26X9qOpen ? "Close navigation menu" : "Open navigation menu");
+        klarSaas26X9qMobilePanel.setAttribute("data-open", String(klarSaas26X9qOpen));
+        document.body.classList.toggle("klar-saas26-x9q-menuLocked", klarSaas26X9qOpen);
+      }
+
+      function klarSaas26X9qInitializeMenu() {
+        if (!klarSaas26X9qMenuButton || !klarSaas26X9qMobilePanel) return;
+
+        klarSaas26X9qMenuButton.addEventListener("click", function () {
+          var klarSaas26X9qIsOpen = klarSaas26X9qMenuButton.getAttribute("aria-expanded") === "true";
+          klarSaas26X9qSetMenu(!klarSaas26X9qIsOpen);
+        });
+
+        klarSaas26X9qMobilePanel.querySelectorAll("a").forEach(function (klarSaas26X9qLink) {
+          klarSaas26X9qLink.addEventListener("click", function () {
+            klarSaas26X9qSetMenu(false);
+          });
+        });
+
+        window.addEventListener("keydown", function (klarSaas26X9qEvent) {
+          if (klarSaas26X9qEvent.key === "Escape") {
+            klarSaas26X9qSetMenu(false);
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.matchMedia("(min-width: 980px)").matches) {
+            klarSaas26X9qSetMenu(false);
+          }
+        });
+      }
+
+      function klarSaas26X9qInitializeFaq() {
+        document.querySelectorAll(".klar-saas26-x9q-faqTrigger").forEach(function (klarSaas26X9qTrigger) {
+          klarSaas26X9qTrigger.addEventListener("click", function () {
+            var klarSaas26X9qAnswerId = klarSaas26X9qTrigger.getAttribute("aria-controls");
+            var klarSaas26X9qAnswer = document.getElementById(klarSaas26X9qAnswerId);
+            var klarSaas26X9qExpanded = klarSaas26X9qTrigger.getAttribute("aria-expanded") === "true";
+
+            klarSaas26X9qTrigger.setAttribute("aria-expanded", String(!klarSaas26X9qExpanded));
+
+            if (klarSaas26X9qAnswer) {
+              klarSaas26X9qAnswer.setAttribute("data-expanded", String(!klarSaas26X9qExpanded));
+            }
+          });
+        });
+      }
+
+      function klarSaas26X9qInitializePricing() {
+        var klarSaas26X9qCycleButtons = document.querySelectorAll(".klar-saas26-x9q-cycleButton");
+        var klarSaas26X9qPriceAmounts = document.querySelectorAll(".klar-saas26-x9q-priceAmount");
+
+        klarSaas26X9qCycleButtons.forEach(function (klarSaas26X9qButton) {
+          klarSaas26X9qButton.addEventListener("click", function () {
+            var klarSaas26X9qCycle = klarSaas26X9qButton.getAttribute("data-klar-saas26-x9q-cycle");
+
+            klarSaas26X9qCycleButtons.forEach(function (klarSaas26X9qOtherButton) {
+              klarSaas26X9qOtherButton.setAttribute("aria-pressed", String(klarSaas26X9qOtherButton === klarSaas26X9qButton));
+            });
+
+            klarSaas26X9qPriceAmounts.forEach(function (klarSaas26X9qAmount) {
+              var klarSaas26X9qNextValue = klarSaas26X9qAmount.getAttribute("data-klar-saas26-x9q-" + klarSaas26X9qCycle);
+              if (klarSaas26X9qNextValue) {
+                klarSaas26X9qAmount.textContent = klarSaas26X9qNextValue;
+              }
+            });
+          });
+        });
+      }
+
+      function klarSaas26X9qInitializeReveal() {
+        var klarSaas26X9qRevealNodes = document.querySelectorAll(".klar-saas26-x9q-revealNode");
+
+        if (!("IntersectionObserver" in window)) {
+          klarSaas26X9qRevealNodes.forEach(function (klarSaas26X9qNode) {
+            klarSaas26X9qNode.classList.add("klar-saas26-x9q-revealed");
+          });
+          return;
+        }
+
+        var klarSaas26X9qObserver = new IntersectionObserver(function (klarSaas26X9qEntries) {
+          klarSaas26X9qEntries.forEach(function (klarSaas26X9qEntry) {
+            if (klarSaas26X9qEntry.isIntersecting) {
+              klarSaas26X9qEntry.target.classList.add("klar-saas26-x9q-revealed");
+              klarSaas26X9qObserver.unobserve(klarSaas26X9qEntry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+        klarSaas26X9qRevealNodes.forEach(function (klarSaas26X9qNode) {
+          klarSaas26X9qObserver.observe(klarSaas26X9qNode);
+        });
+      }
+
+      function klarSaas26X9qInitializeSmoothAnchors() {
+        document.querySelectorAll('a[href^="#"]').forEach(function (klarSaas26X9qAnchor) {
+          klarSaas26X9qAnchor.addEventListener("click", function (klarSaas26X9qEvent) {
+            var klarSaas26X9qTargetId = klarSaas26X9qAnchor.getAttribute("href");
+            if (!klarSaas26X9qTargetId || klarSaas26X9qTargetId === "#") return;
+
+            var klarSaas26X9qTarget = document.querySelector(klarSaas26X9qTargetId);
+            if (!klarSaas26X9qTarget) return;
+
+            klarSaas26X9qEvent.preventDefault();
+            klarSaas26X9qTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+
+            if (history.pushState) {
+              history.pushState(null, "", klarSaas26X9qTargetId);
+            }
+          });
+        });
+      }
+
+      function klarSaas26X9qBoot() {
+        if (klarSaas26X9qYear) {
+          klarSaas26X9qYear.textContent = String(new Date().getFullYear());
+        }
+
+        klarSaas26X9qUpdateTopbar();
+        klarSaas26X9qInitializeMenu();
+        klarSaas26X9qInitializeFaq();
+        klarSaas26X9qInitializePricing();
+        klarSaas26X9qInitializeReveal();
+        klarSaas26X9qInitializeSmoothAnchors();
+
+        window.addEventListener("scroll", klarSaas26X9qUpdateTopbar, { passive: true });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", klarSaas26X9qBoot);
+      } else {
+        klarSaas26X9qBoot();
+      }
+    })();
+  </script>
+</body>
+</html>
