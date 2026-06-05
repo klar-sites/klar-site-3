@@ -1,0 +1,2518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velox — The intelligent platform that accelerates your workflow, automates repetitive tasks, and scales with your team.">
+  <title>Velox — Accelerate Your Workflow</title>
+  <style>
+    /* ============================================
+       VELOX SAAS 2026 — Complete Design System
+       Namespace: vlx26
+       ============================================ */
+
+    /* --- CSS Variables --- */
+    :root {
+      --vlx26-bg-primary: #09090b;
+      --vlx26-bg-secondary: #111113;
+      --vlx26-bg-tertiary: #18181b;
+      --vlx26-bg-card: #1c1c20;
+      --vlx26-bg-card-hover: #222228;
+      --vlx26-bg-elevated: #27272a;
+      --vlx26-text-primary: #fafafa;
+      --vlx26-text-secondary: #a1a1aa;
+      --vlx26-text-tertiary: #71717a;
+      --vlx26-text-muted: #52525b;
+      --vlx26-accent-primary: #6d5cff;
+      --vlx26-accent-primary-hover: #7f70ff;
+      --vlx26-accent-primary-glow: rgba(109, 92, 255, 0.25);
+      --vlx26-accent-secondary: #06d6a0;
+      --vlx26-accent-secondary-glow: rgba(6, 214, 160, 0.2);
+      --vlx26-accent-tertiary: #ff6b9d;
+      --vlx26-border-subtle: rgba(255, 255, 255, 0.06);
+      --vlx26-border-light: rgba(255, 255, 255, 0.1);
+      --vlx26-border-medium: rgba(255, 255, 255, 0.15);
+      --vlx26-gradient-hero: linear-gradient(135deg, #6d5cff 0%, #06d6a0 50%, #ff6b9d 100%);
+      --vlx26-gradient-subtle: linear-gradient(135deg, rgba(109,92,255,0.1) 0%, rgba(6,214,160,0.05) 100%);
+      --vlx26-gradient-card: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+      --vlx26-shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --vlx26-shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+      --vlx26-shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+      --vlx26-shadow-glow: 0 0 40px rgba(109,92,255,0.15);
+      --vlx26-radius-sm: 8px;
+      --vlx26-radius-md: 12px;
+      --vlx26-radius-lg: 16px;
+      --vlx26-radius-xl: 24px;
+      --vlx26-radius-full: 9999px;
+      --vlx26-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --vlx26-font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      --vlx26-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --vlx26-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      --vlx26-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+      --vlx26-transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* --- Reset & Base --- */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--vlx26-font-sans);
+      background-color: var(--vlx26-bg-primary);
+      color: var(--vlx26-text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* --- Focus Styles (Accessibility) --- */
+    :focus-visible {
+      outline: 2px solid var(--vlx26-accent-primary);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* --- Utility: Container --- */
+    .vlx26-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-container {
+        padding: 0 32px;
+      }
+    }
+
+    /* --- Utility: Section Spacing --- */
+    .vlx26-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-section {
+        padding: 120px 0;
+      }
+    }
+
+    /* --- Utility: Section Header --- */
+    .vlx26-section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 60px;
+    }
+
+    .vlx26-section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--vlx26-radius-full);
+      background: var(--vlx26-gradient-subtle);
+      border: 1px solid var(--vlx26-border-subtle);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--vlx26-accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .vlx26-section-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-section-subtitle {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--vlx26-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* --- Animate on scroll --- */
+    .vlx26-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .vlx26-animate.vlx26-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .vlx26-animate-delay-1 { transition-delay: 100ms; }
+    .vlx26-animate-delay-2 { transition-delay: 200ms; }
+    .vlx26-animate-delay-3 { transition-delay: 300ms; }
+    .vlx26-animate-delay-4 { transition-delay: 400ms; }
+    .vlx26-animate-delay-5 { transition-delay: 500ms; }
+    .vlx26-animate-delay-6 { transition-delay: 600ms; }
+
+    /* ============================================
+       NAVBAR — vlx26-nav
+       ============================================ */
+    .vlx26-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--vlx26-border-subtle);
+      transition: background var(--vlx26-transition-base), box-shadow var(--vlx26-transition-base);
+    }
+
+    .vlx26-nav.vlx26-nav-scrolled {
+      background: rgba(9, 9, 11, 0.95);
+      box-shadow: var(--vlx26-shadow-md);
+    }
+
+    .vlx26-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .vlx26-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .vlx26-nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--vlx26-radius-sm);
+      background: var(--vlx26-gradient-hero);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 900;
+      color: white;
+    }
+
+    .vlx26-nav-links {
+      display: none;
+      align-items: center;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-nav-links {
+        display: flex;
+      }
+    }
+
+    .vlx26-nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--vlx26-text-secondary);
+      transition: color var(--vlx26-transition-fast);
+      position: relative;
+    }
+
+    .vlx26-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vlx26-accent-primary);
+      border-radius: 1px;
+      transition: width var(--vlx26-transition-base);
+    }
+
+    .vlx26-nav-link:hover,
+    .vlx26-nav-link:focus-visible {
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-nav-link:hover::after {
+      width: 100%;
+    }
+
+    .vlx26-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .vlx26-btn-ghost {
+      display: none;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--vlx26-text-secondary);
+      border-radius: var(--vlx26-radius-sm);
+      transition: color var(--vlx26-transition-fast), background var(--vlx26-transition-fast);
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-btn-ghost {
+        display: inline-flex;
+      }
+    }
+
+    .vlx26-btn-ghost:hover {
+      color: var(--vlx26-text-primary);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .vlx26-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: white;
+      background: var(--vlx26-accent-primary);
+      border-radius: var(--vlx26-radius-sm);
+      transition: background var(--vlx26-transition-fast), transform var(--vlx26-transition-fast), box-shadow var(--vlx26-transition-fast);
+      box-shadow: 0 0 0 0 var(--vlx26-accent-primary-glow);
+    }
+
+    .vlx26-btn-primary:hover {
+      background: var(--vlx26-accent-primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--vlx26-accent-primary-glow);
+    }
+
+    .vlx26-btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .vlx26-nav-mobile-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--vlx26-text-secondary);
+      border-radius: var(--vlx26-radius-sm);
+      transition: color var(--vlx26-transition-fast), background var(--vlx26-transition-fast);
+    }
+
+    .vlx26-nav-mobile-toggle:hover {
+      color: var(--vlx26-text-primary);
+      background: rgba(255,255,255,0.05);
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-nav-mobile-toggle {
+        display: none;
+      }
+    }
+
+    .vlx26-nav-mobile-toggle svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Mobile Menu */
+    .vlx26-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999;
+      padding: 32px 20px;
+      flex-direction: column;
+      gap: 8px;
+      animation: vlx26-slide-down 0.3s ease;
+    }
+
+    .vlx26-mobile-menu.vlx26-mobile-open {
+      display: flex;
+    }
+
+    @keyframes vlx26-slide-down {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .vlx26-mobile-link {
+      display: block;
+      padding: 16px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--vlx26-text-secondary);
+      border-bottom: 1px solid var(--vlx26-border-subtle);
+      transition: color var(--vlx26-transition-fast);
+    }
+
+    .vlx26-mobile-link:hover {
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-mobile-cta {
+      margin-top: 24px;
+      padding: 14px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background: var(--vlx26-accent-primary);
+      border-radius: var(--vlx26-radius-md);
+    }
+
+    /* ============================================
+       HERO — vlx26-hero
+       ============================================ */
+    .vlx26-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .vlx26-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .vlx26-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.4;
+      animation: vlx26-float 20s ease-in-out infinite;
+    }
+
+    .vlx26-hero-orb-1 {
+      width: 600px;
+      height: 600px;
+      background: var(--vlx26-accent-primary);
+      top: -200px;
+      right: -150px;
+      animation-delay: 0s;
+    }
+
+    .vlx26-hero-orb-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--vlx26-accent-secondary);
+      bottom: -100px;
+      left: -100px;
+      animation-delay: -7s;
+    }
+
+    .vlx26-hero-orb-3 {
+      width: 300px;
+      height: 300px;
+      background: var(--vlx26-accent-tertiary);
+      top: 40%;
+      left: 40%;
+      animation-delay: -14s;
+      opacity: 0.2;
+    }
+
+    @keyframes vlx26-float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -30px) scale(1.05); }
+      66% { transform: translate(-20px, 20px) scale(0.95); }
+    }
+
+    .vlx26-hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    .vlx26-hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .vlx26-hero-announcement {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 6px 6px 14px;
+      border-radius: var(--vlx26-radius-full);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--vlx26-border-subtle);
+      font-size: 0.85rem;
+      color: var(--vlx26-text-secondary);
+      margin-bottom: 32px;
+      transition: background var(--vlx26-transition-fast);
+    }
+
+    .vlx26-hero-announcement:hover {
+      background: rgba(255,255,255,0.07);
+    }
+
+    .vlx26-hero-announcement-badge {
+      padding: 3px 10px;
+      border-radius: var(--vlx26-radius-full);
+      background: var(--vlx26-accent-primary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .vlx26-hero-title {
+      font-size: clamp(2.25rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .vlx26-hero-title-gradient {
+      background: var(--vlx26-gradient-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .vlx26-hero-description {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--vlx26-text-secondary);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .vlx26-hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 480px) {
+      .vlx26-hero-actions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .vlx26-btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      background: var(--vlx26-accent-primary);
+      border-radius: var(--vlx26-radius-md);
+      transition: all var(--vlx26-transition-base);
+      box-shadow: 0 0 0 0 var(--vlx26-accent-primary-glow), var(--vlx26-shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vlx26-btn-hero-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity var(--vlx26-transition-fast);
+    }
+
+    .vlx26-btn-hero-primary:hover {
+      background: var(--vlx26-accent-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px var(--vlx26-accent-primary-glow), var(--vlx26-shadow-lg);
+    }
+
+    .vlx26-btn-hero-primary:hover::before {
+      opacity: 1;
+    }
+
+    .vlx26-btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--vlx26-text-primary);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--vlx26-border-light);
+      border-radius: var(--vlx26-radius-md);
+      transition: all var(--vlx26-transition-base);
+    }
+
+    .vlx26-btn-hero-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--vlx26-border-medium);
+      transform: translateY(-2px);
+    }
+
+    .vlx26-hero-social-proof {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    @media (min-width: 480px) {
+      .vlx26-hero-social-proof {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .vlx26-hero-avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .vlx26-hero-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--vlx26-bg-primary);
+      margin-left: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .vlx26-hero-avatar:first-child {
+      margin-left: 0;
+    }
+
+    .vlx26-hero-avatar-1 { background: #6d5cff; }
+    .vlx26-hero-avatar-2 { background: #06d6a0; }
+    .vlx26-hero-avatar-3 { background: #ff6b9d; }
+    .vlx26-hero-avatar-4 { background: #fbbf24; }
+    .vlx26-hero-avatar-5 { background: #38bdf8; }
+
+    .vlx26-hero-proof-text {
+      font-size: 0.9rem;
+      color: var(--vlx26-text-secondary);
+    }
+
+    .vlx26-hero-proof-text strong {
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-hero-stars {
+      display: inline-flex;
+      gap: 2px;
+      color: #fbbf24;
+      font-size: 0.85rem;
+    }
+
+    /* ============================================
+       LOGO BAR — vlx26-logos
+       ============================================ */
+    .vlx26-logos {
+      padding: 60px 0;
+      border-top: 1px solid var(--vlx26-border-subtle);
+      border-bottom: 1px solid var(--vlx26-border-subtle);
+      background: var(--vlx26-bg-secondary);
+    }
+
+    .vlx26-logos-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--vlx26-text-muted);
+      margin-bottom: 32px;
+    }
+
+    .vlx26-logos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 32px 48px;
+    }
+
+    .vlx26-logo-item {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--vlx26-text-muted);
+      letter-spacing: -0.02em;
+      opacity: 0.6;
+      transition: opacity var(--vlx26-transition-fast);
+      user-select: none;
+    }
+
+    .vlx26-logo-item:hover {
+      opacity: 1;
+    }
+
+    /* ============================================
+       FEATURES — vlx26-features
+       ============================================ */
+    .vlx26-features {
+      background: var(--vlx26-bg-primary);
+    }
+
+    .vlx26-features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .vlx26-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .vlx26-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .vlx26-feature-card {
+      position: relative;
+      padding: 32px;
+      border-radius: var(--vlx26-radius-lg);
+      background: var(--vlx26-bg-card);
+      border: 1px solid var(--vlx26-border-subtle);
+      transition: all var(--vlx26-transition-base);
+      overflow: hidden;
+    }
+
+    .vlx26-feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--vlx26-gradient-card);
+      opacity: 0;
+      transition: opacity var(--vlx26-transition-base);
+    }
+
+    .vlx26-feature-card:hover {
+      border-color: var(--vlx26-border-light);
+      transform: translateY(-4px);
+      box-shadow: var(--vlx26-shadow-glow);
+    }
+
+    .vlx26-feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .vlx26-feature-icon {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--vlx26-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .vlx26-feature-icon-purple {
+      background: rgba(109, 92, 255, 0.15);
+      color: #6d5cff;
+    }
+
+    .vlx26-feature-icon-green {
+      background: rgba(6, 214, 160, 0.15);
+      color: #06d6a0;
+    }
+
+    .vlx26-feature-icon-pink {
+      background: rgba(255, 107, 157, 0.15);
+      color: #ff6b9d;
+    }
+
+    .vlx26-feature-icon-yellow {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+    }
+
+    .vlx26-feature-icon-blue {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+    }
+
+    .vlx26-feature-icon-orange {
+      background: rgba(251, 146, 60, 0.15);
+      color: #fb923c;
+    }
+
+    .vlx26-feature-title {
+      position: relative;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .vlx26-feature-desc {
+      position: relative;
+      font-size: 0.925rem;
+      color: var(--vlx26-text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       BENEFITS — vlx26-benefits
+       ============================================ */
+    .vlx26-benefits {
+      background: var(--vlx26-bg-secondary);
+    }
+
+    .vlx26-benefits-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-benefits-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+    }
+
+    .vlx26-benefits-visual {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: var(--vlx26-radius-xl);
+      background: var(--vlx26-bg-card);
+      border: 1px solid var(--vlx26-border-subtle);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vlx26-benefits-visual-inner {
+      padding: 32px;
+      width: 100%;
+    }
+
+    .vlx26-mock-dashboard {
+      width: 100%;
+      border-radius: var(--vlx26-radius-md);
+      overflow: hidden;
+    }
+
+    .vlx26-mock-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 14px;
+      background: var(--vlx26-bg-tertiary);
+      border-bottom: 1px solid var(--vlx26-border-subtle);
+    }
+
+    .vlx26-mock-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .vlx26-mock-dot-red { background: #ff5f57; }
+    .vlx26-mock-dot-yellow { background: #ffbd2e; }
+    .vlx26-mock-dot-green { background: #28c840; }
+
+    .vlx26-mock-body {
+      padding: 20px;
+      background: var(--vlx26-bg-primary);
+    }
+
+    .vlx26-mock-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      height: 100px;
+      margin-bottom: 16px;
+    }
+
+    .vlx26-mock-bar {
+      flex: 1;
+      border-radius: 4px 4px 0 0;
+      transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .vlx26-mock-stat-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .vlx26-mock-stat {
+      flex: 1;
+      padding: 12px;
+      border-radius: var(--vlx26-radius-sm);
+      background: var(--vlx26-bg-tertiary);
+      border: 1px solid var(--vlx26-border-subtle);
+    }
+
+    .vlx26-mock-stat-value {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-mock-stat-label {
+      font-size: 0.7rem;
+      color: var(--vlx26-text-tertiary);
+      margin-top: 2px;
+    }
+
+    .vlx26-benefits-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .vlx26-benefit-item {
+      display: flex;
+      gap: 16px;
+    }
+
+    .vlx26-benefit-check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(6, 214, 160, 0.15);
+      color: #06d6a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    .vlx26-benefit-text h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .vlx26-benefit-text p {
+      font-size: 0.925rem;
+      color: var(--vlx26-text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       STATS — vlx26-stats
+       ============================================ */
+    .vlx26-stats {
+      background: var(--vlx26-bg-primary);
+      border-top: 1px solid var(--vlx26-border-subtle);
+      border-bottom: 1px solid var(--vlx26-border-subtle);
+      padding: 60px 0;
+    }
+
+    .vlx26-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .vlx26-stat-item {
+      text-align: center;
+    }
+
+    .vlx26-stat-number {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      background: var(--vlx26-gradient-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .vlx26-stat-label {
+      font-size: 0.9rem;
+      color: var(--vlx26-text-tertiary);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    /* ============================================
+       TESTIMONIALS — vlx26-testimonials
+       ============================================ */
+    .vlx26-testimonials {
+      background: var(--vlx26-bg-secondary);
+    }
+
+    .vlx26-testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .vlx26-testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .vlx26-testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .vlx26-testimonial-card {
+      padding: 28px;
+      border-radius: var(--vlx26-radius-lg);
+      background: var(--vlx26-bg-card);
+      border: 1px solid var(--vlx26-border-subtle);
+      transition: all var(--vlx26-transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vlx26-testimonial-card:hover {
+      border-color: var(--vlx26-border-light);
+      transform: translateY(-2px);
+    }
+
+    .vlx26-testimonial-stars {
+      display: flex;
+      gap: 3px;
+      color: #fbbf24;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+
+    .vlx26-testimonial-quote {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--vlx26-text-secondary);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .vlx26-testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--vlx26-border-subtle);
+    }
+
+    .vlx26-testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .vlx26-testimonial-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .vlx26-testimonial-role {
+      font-size: 0.8rem;
+      color: var(--vlx26-text-tertiary);
+    }
+
+    /* ============================================
+       PRICING — vlx26-pricing
+       ============================================ */
+    .vlx26-pricing {
+      background: var(--vlx26-bg-primary);
+    }
+
+    .vlx26-pricing-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .vlx26-pricing-toggle-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--vlx26-text-secondary);
+    }
+
+    .vlx26-pricing-toggle-label.vlx26-toggle-active {
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-toggle-switch {
+      position: relative;
+      width: 52px;
+      height: 28px;
+      border-radius: var(--vlx26-radius-full);
+      background: var(--vlx26-bg-elevated);
+      border: 1px solid var(--vlx26-border-light);
+      cursor: pointer;
+      transition: background var(--vlx26-transition-fast);
+    }
+
+    .vlx26-toggle-switch.vlx26-toggle-on {
+      background: var(--vlx26-accent-primary);
+      border-color: var(--vlx26-accent-primary);
+    }
+
+    .vlx26-toggle-knob {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      transition: transform var(--vlx26-transition-spring);
+      box-shadow: var(--vlx26-shadow-sm);
+    }
+
+    .vlx26-toggle-switch.vlx26-toggle-on .vlx26-toggle-knob {
+      transform: translateX(24px);
+    }
+
+    .vlx26-pricing-save {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--vlx26-accent-secondary);
+      padding: 3px 10px;
+      border-radius: var(--vlx26-radius-full);
+      background: rgba(6, 214, 160, 0.1);
+    }
+
+    .vlx26-pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .vlx26-pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+      }
+    }
+
+    .vlx26-pricing-card {
+      position: relative;
+      padding: 36px 28px;
+      border-radius: var(--vlx26-radius-lg);
+      background: var(--vlx26-bg-card);
+      border: 1px solid var(--vlx26-border-subtle);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--vlx26-transition-base);
+    }
+
+    .vlx26-pricing-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .vlx26-pricing-card-popular {
+      border-color: var(--vlx26-accent-primary);
+      box-shadow: 0 0 0 1px var(--vlx26-accent-primary), var(--vlx26-shadow-glow);
+      background: linear-gradient(180deg, rgba(109,92,255,0.05) 0%, var(--vlx26-bg-card) 40%);
+    }
+
+    .vlx26-pricing-popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 16px;
+      border-radius: var(--vlx26-radius-full);
+      background: var(--vlx26-accent-primary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .vlx26-pricing-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .vlx26-pricing-desc {
+      font-size: 0.875rem;
+      color: var(--vlx26-text-tertiary);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .vlx26-pricing-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .vlx26-pricing-currency {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--vlx26-text-secondary);
+    }
+
+    .vlx26-pricing-amount {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .vlx26-pricing-period {
+      font-size: 0.9rem;
+      color: var(--vlx26-text-tertiary);
+      margin-left: 2px;
+    }
+
+    .vlx26-pricing-billing {
+      font-size: 0.8rem;
+      color: var(--vlx26-text-muted);
+      margin-bottom: 28px;
+    }
+
+    .vlx26-pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex: 1;
+    }
+
+    .vlx26-pricing-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--vlx26-text-secondary);
+    }
+
+    .vlx26-pricing-feature-check {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(6, 214, 160, 0.15);
+      color: #06d6a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      margin-top: 2px;
+    }
+
+    .vlx26-pricing-cta {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--vlx26-radius-md);
+      transition: all var(--vlx26-transition-base);
+    }
+
+    .vlx26-pricing-cta-outline {
+      color: var(--vlx26-text-primary);
+      background: transparent;
+      border: 1px solid var(--vlx26-border-light);
+    }
+
+    .vlx26-pricing-cta-outline:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: var(--vlx26-border-medium);
+    }
+
+    .vlx26-pricing-cta-primary {
+      color: white;
+      background: var(--vlx26-accent-primary);
+    }
+
+    .vlx26-pricing-cta-primary:hover {
+      background: var(--vlx26-accent-primary-hover);
+      box-shadow: 0 4px 20px var(--vlx26-accent-primary-glow);
+    }
+
+    /* ============================================
+       FAQ — vlx26-faq
+       ============================================ */
+    .vlx26-faq {
+      background: var(--vlx26-bg-secondary);
+    }
+
+    .vlx26-faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .vlx26-faq-item {
+      border-radius: var(--vlx26-radius-md);
+      background: var(--vlx26-bg-card);
+      border: 1px solid var(--vlx26-border-subtle);
+      overflow: hidden;
+      transition: border-color var(--vlx26-transition-fast);
+    }
+
+    .vlx26-faq-item.vlx26-faq-open {
+      border-color: var(--vlx26-border-light);
+    }
+
+    .vlx26-faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      font-size: 0.975rem;
+      font-weight: 600;
+      color: var(--vlx26-text-primary);
+      text-align: left;
+      transition: color var(--vlx26-transition-fast);
+    }
+
+    .vlx26-faq-trigger:hover {
+      color: var(--vlx26-accent-primary);
+    }
+
+    .vlx26-faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--vlx26-text-tertiary);
+      transition: transform var(--vlx26-transition-base), color var(--vlx26-transition-fast);
+    }
+
+    .vlx26-faq-open .vlx26-faq-icon {
+      transform: rotate(45deg);
+      color: var(--vlx26-accent-primary);
+    }
+
+    .vlx26-faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .vlx26-faq-answer {
+      padding: 0 24px 20px;
+      font-size: 0.925rem;
+      line-height: 1.7;
+      color: var(--vlx26-text-secondary);
+    }
+
+    /* ============================================
+       CTA SECTION — vlx26-cta
+       ============================================ */
+    .vlx26-cta-section {
+      background: var(--vlx26-bg-primary);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vlx26-cta-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .vlx26-cta-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .vlx26-cta-orb-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--vlx26-accent-primary);
+      opacity: 0.15;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .vlx26-cta-orb-2 {
+      width: 300px;
+      height: 300px;
+      background: var(--vlx26-accent-secondary);
+      opacity: 0.1;
+      bottom: -150px;
+      right: 10%;
+    }
+
+    .vlx26-cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .vlx26-cta-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .vlx26-cta-subtitle {
+      font-size: 1.1rem;
+      color: var(--vlx26-text-secondary);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .vlx26-cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    @media (min-width: 480px) {
+      .vlx26-cta-actions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .vlx26-cta-note {
+      font-size: 0.8rem;
+      color: var(--vlx26-text-muted);
+      margin-top: 16px;
+    }
+
+    /* ============================================
+       FOOTER — vlx26-footer
+       ============================================ */
+    .vlx26-footer {
+      background: var(--vlx26-bg-secondary);
+      border-top: 1px solid var(--vlx26-border-subtle);
+      padding: 60px 0 32px;
+    }
+
+    .vlx26-footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 640px) {
+      .vlx26-footer-grid {
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 40px;
+      }
+    }
+
+    .vlx26-footer-brand p {
+      font-size: 0.9rem;
+      color: var(--vlx26-text-tertiary);
+      line-height: 1.65;
+      margin-top: 12px;
+      max-width: 280px;
+    }
+
+    .vlx26-footer-column h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--vlx26-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .vlx26-footer-column a {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--vlx26-text-secondary);
+      padding: 4px 0;
+      transition: color var(--vlx26-transition-fast);
+    }
+
+    .vlx26-footer-column a:hover {
+      color: var(--vlx26-text-primary);
+    }
+
+    .vlx26-footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding-top: 32px;
+      border-top: 1px solid var(--vlx26-border-subtle);
+    }
+
+    @media (min-width: 640px) {
+      .vlx26-footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .vlx26-footer-copy {
+      font-size: 0.825rem;
+      color: var(--vlx26-text-muted);
+    }
+
+    .vlx26-footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .vlx26-footer-social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--vlx26-radius-sm);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--vlx26-border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--vlx26-text-tertiary);
+      font-size: 0.9rem;
+      transition: all var(--vlx26-transition-fast);
+    }
+
+    .vlx26-footer-social-link:hover {
+      color: var(--vlx26-text-primary);
+      background: rgba(255,255,255,0.08);
+      border-color: var(--vlx26-border-light);
+    }
+
+    /* --- Screen reader only --- */
+    .vlx26-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* --- Reduced motion --- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+      .vlx26-animate {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav class="vlx26-nav" id="vlx26-nav" role="navigation" aria-label="Main navigation">
+    <div class="vlx26-container vlx26-nav-inner">
+      <a href="#" class="vlx26-nav-logo" aria-label="Velox Home">
+        <div class="vlx26-nav-logo-icon" aria-hidden="true">V</div>
+        <span>Velox</span>
+      </a>
+
+      <div class="vlx26-nav-links" role="menubar">
+        <a href="#vlx26-features" class="vlx26-nav-link" role="menuitem">Features</a>
+        <a href="#vlx26-benefits" class="vlx26-nav-link" role="menuitem">Benefits</a>
+        <a href="#vlx26-testimonials" class="vlx26-nav-link" role="menuitem">Testimonials</a>
+        <a href="#vlx26-pricing" class="vlx26-nav-link" role="menuitem">Pricing</a>
+        <a href="#vlx26-faq" class="vlx26-nav-link" role="menuitem">FAQ</a>
+      </div>
+
+      <div class="vlx26-nav-actions">
+        <a href="#" class="vlx26-btn-ghost">Sign In</a>
+        <a href="#vlx26-pricing" class="vlx26-btn-primary">Get Started</a>
+        <button class="vlx26-nav-mobile-toggle" id="vlx26-mobile-btn" aria-expanded="false" aria-controls="vlx26-mobile-menu" aria-label="Toggle mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="vlx26-mobile-menu" id="vlx26-mobile-menu" role="menu">
+      <a href="#vlx26-features" class="vlx26-mobile-link" role="menuitem">Features</a>
+      <a href="#vlx26-benefits" class="vlx26-mobile-link" role="menuitem">Benefits</a>
+      <a href="#vlx26-testimonials" class="vlx26-mobile-link" role="menuitem">Testimonials</a>
+      <a href="#vlx26-pricing" class="vlx26-mobile-link" role="menuitem">Pricing</a>
+      <a href="#vlx26-faq" class="vlx26-mobile-link" role="menuitem">FAQ</a>
+      <a href="#vlx26-pricing" class="vlx26-mobile-cta" role="menuitem">Get Started Free</a>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="vlx26-hero" aria-label="Hero">
+    <div class="vlx26-hero-bg" aria-hidden="true">
+      <div class="vlx26-hero-orb vlx26-hero-orb-1"></div>
+      <div class="vlx26-hero-orb vlx26-hero-orb-2"></div>
+      <div class="vlx26-hero-orb vlx26-hero-orb-3"></div>
+      <div class="vlx26-hero-grid-overlay"></div>
+    </div>
+
+    <div class="vlx26-container vlx26-hero-content">
+      <a href="#" class="vlx26-hero-announcement vlx26-animate">
+        <span>🚀 Just launched</span>
+        <span class="vlx26-hero-announcement-badge">v3.0</span>
+      </a>
+
+      <h1 class="vlx26-hero-title vlx26-animate vlx26-animate-delay-1">
+        Ship faster with<br>
+        <span class="vlx26-hero-title-gradient">intelligent automation</span>
+      </h1>
+
+      <p class="vlx26-hero-description vlx26-animate vlx26-animate-delay-2">
+        Velox eliminates the busywork that slows your team down. Automate workflows, unify your tools, and accelerate delivery — all from one beautifully designed platform.
+      </p>
+
+      <div class="vlx26-hero-actions vlx26-animate vlx26-animate-delay-3">
+        <a href="#vlx26-pricing" class="vlx26-btn-hero-primary">
+          Start free trial
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4"/></svg>
+        </a>
+        <a href="#vlx26-features" class="vlx26-btn-hero-secondary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polygon points="6,3 13,8 6,13"/></svg>
+          Watch demo
+        </a>
+      </div>
+
+      <div class="vlx26-hero-social-proof vlx26-animate vlx26-animate-delay-4">
+        <div class="vlx26-hero-avatars" aria-hidden="true">
+          <div class="vlx26-hero-avatar vlx26-hero-avatar-1">JK</div>
+          <div class="vlx26-hero-avatar vlx26-hero-avatar-2">AL</div>
+          <div class="vlx26-hero-avatar vlx26-hero-avatar-3">SM</div>
+          <div class="vlx26-hero-avatar vlx26-hero-avatar-4">RB</div>
+          <div class="vlx26-hero-avatar vlx26-hero-avatar-5">+9k</div>
+        </div>
+        <p class="vlx26-hero-proof-text">
+          <span class="vlx26-hero-stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <strong>4.9/5</strong> from 2,400+ reviews
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LOGO BAR ======== -->
+  <section class="vlx26-logos vlx26-animate" aria-label="Trusted by leading companies">
+    <div class="vlx26-container">
+      <p class="vlx26-logos-label">Trusted by teams at the world's best companies</p>
+      <div class="vlx26-logos-grid">
+        <span class="vlx26-logo-item">Stripe</span>
+        <span class="vlx26-logo-item">Vercel</span>
+        <span class="vlx26-logo-item">Linear</span>
+        <span class="vlx26-logo-item">Notion</span>
+        <span class="vlx26-logo-item">Figma</span>
+        <span class="vlx26-logo-item">Shopify</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FEATURES ======== -->
+  <section class="vlx26-features vlx26-section" id="vlx26-features" aria-label="Features">
+    <div class="vlx26-container">
+      <div class="vlx26-section-header vlx26-animate">
+        <div class="vlx26-section-badge">✦ Features</div>
+        <h2 class="vlx26-section-title">Everything you need to move fast</h2>
+        <p class="vlx26-section-subtitle">From ideation to deployment, Velox gives your team superpowers at every stage of the workflow.</p>
+      </div>
+
+      <div class="vlx26-features-grid">
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-1">
+          <div class="vlx26-feature-icon vlx26-feature-icon-purple" aria-hidden="true">⚡</div>
+          <h3 class="vlx26-feature-title">Lightning Workflows</h3>
+          <p class="vlx26-feature-desc">Build complex automation pipelines with our visual editor. No code required, infinite flexibility.</p>
+        </div>
+
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-2">
+          <div class="vlx26-feature-icon vlx26-feature-icon-green" aria-hidden="true">🔗</div>
+          <h3 class="vlx26-feature-title">300+ Integrations</h3>
+          <p class="vlx26-feature-desc">Connect every tool in your stack. From Slack to Salesforce, we've got native integrations covered.</p>
+        </div>
+
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-3">
+          <div class="vlx26-feature-icon vlx26-feature-icon-pink" aria-hidden="true">🛡️</div>
+          <h3 class="vlx26-feature-title">Enterprise Security</h3>
+          <p class="vlx26-feature-desc">SOC 2 Type II, GDPR compliant, SSO, and role-based access control out of the box.</p>
+        </div>
+
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-4">
+          <div class="vlx26-feature-icon vlx26-feature-icon-yellow" aria-hidden="true">📊</div>
+          <h3 class="vlx26-feature-title">Real-time Analytics</h3>
+          <p class="vlx26-feature-desc">Track performance metrics, identify bottlenecks, and make data-driven decisions instantly.</p>
+        </div>
+
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-5">
+          <div class="vlx26-feature-icon vlx26-feature-icon-blue" aria-hidden="true">🤖</div>
+          <h3 class="vlx26-feature-title">AI-Powered Insights</h3>
+          <p class="vlx26-feature-desc">Our AI engine learns from your patterns to suggest optimizations and predict outcomes.</p>
+        </div>
+
+        <div class="vlx26-feature-card vlx26-animate vlx26-animate-delay-6">
+          <div class="vlx26-feature-icon vlx26-feature-icon-orange" aria-hidden="true">👥</div>
+          <h3 class="vlx26-feature-title">Team Collaboration</h3>
+          <p class="vlx26-feature-desc">Real-time co-editing, comments, shared workspaces, and instant notifications for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BENEFITS ======== -->
+  <section class="vlx26-benefits vlx26-section" id="vlx26-benefits" aria-label="Benefits">
+    <div class="vlx26-container">
+      <div class="vlx26-benefits-layout">
+        <div class="vlx26-benefits-visual vlx26-animate">
+          <div class="vlx26-benefits-visual-inner">
+            <div class="vlx26-mock-dashboard">
+              <div class="vlx26-mock-titlebar" aria-hidden="true">
+                <div class="vlx26-mock-dot vlx26-mock-dot-red"></div>
+                <div class="vlx26-mock-dot vlx26-mock-dot-yellow"></div>
+                <div class="vlx26-mock-dot vlx26-mock-dot-green"></div>
+              </div>
+              <div class="vlx26-mock-body" aria-hidden="true">
+                <div class="vlx26-mock-chart" id="vlx26-mock-chart">
+                  <div class="vlx26-mock-bar" style="height: 40%; background: var(--vlx26-accent-primary); opacity: 0.5;"></div>
+                  <div class="vlx26-mock-bar" style="height: 65%; background: var(--vlx26-accent-primary); opacity: 0.6;"></div>
+                  <div class="vlx26-mock-bar" style="height: 45%; background: var(--vlx26-accent-primary); opacity: 0.55;"></div>
+                  <div class="vlx26-mock-bar" style="height: 80%; background: var(--vlx26-accent-primary); opacity: 0.7;"></div>
+                  <div class="vlx26-mock-bar" style="height: 60%; background: var(--vlx26-accent-primary); opacity: 0.65;"></div>
+                  <div class="vlx26-mock-bar" style="height: 90%; background: var(--vlx26-accent-secondary); opacity: 0.8;"></div>
+                  <div class="vlx26-mock-bar" style="height: 75%; background: var(--vlx26-accent-primary); opacity: 0.7;"></div>
+                  <div class="vlx26-mock-bar" style="height: 95%; background: var(--vlx26-accent-secondary);"></div>
+                </div>
+                <div class="vlx26-mock-stat-row">
+                  <div class="vlx26-mock-stat">
+                    <div class="vlx26-mock-stat-value" style="color: #06d6a0;">+47%</div>
+                    <div class="vlx26-mock-stat-label">Efficiency</div>
+                  </div>
+                  <div class="vlx26-mock-stat">
+                    <div class="vlx26-mock-stat-value">2.4x</div>
+                    <div class="vlx26-mock-stat-label">Faster delivery</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-benefits-content">
+          <div class="vlx26-section-header" style="text-align: left; margin: 0 0 16px;">
+            <div class="vlx26-section-badge">✦ Why Velox</div>
+            <h2 class="vlx26-section-title">Stop managing tools.<br>Start shipping products.</h2>
+          </div>
+
+          <div class="vlx26-benefit-item vlx26-animate vlx26-animate-delay-1">
+            <div class="vlx26-benefit-check" aria-hidden="true">✓</div>
+            <div class="vlx26-benefit-text">
+              <h3>Reduce context switching by 60%</h3>
+              <p>One unified workspace means your team stays focused on what matters — building great products.</p>
+            </div>
+          </div>
+
+          <div class="vlx26-benefit-item vlx26-animate vlx26-animate-delay-2">
+            <div class="vlx26-benefit-check" aria-hidden="true">✓</div>
+            <div class="vlx26-benefit-text">
+              <h3>Deploy 2.4x faster</h3>
+              <p>Automated pipelines and smart templates eliminate repetitive setup so you ship in hours, not weeks.</p>
+            </div>
+          </div>
+
+          <div class="vlx26-benefit-item vlx26-animate vlx26-animate-delay-3">
+            <div class="vlx26-benefit-check" aria-hidden="true">✓</div>
+            <div class="vlx26-benefit-text">
+              <h3>Save $120K+ per year</h3>
+              <p>Replace 5-8 separate tools with a single platform. Less overhead, fewer licenses, better results.</p>
+            </div>
+          </div>
+
+          <div class="vlx26-benefit-item vlx26-animate vlx26-animate-delay-4">
+            <div class="vlx26-benefit-check" aria-hidden="true">✓</div>
+            <div class="vlx26-benefit-text">
+              <h3>Scale without complexity</h3>
+              <p>From 5-person startups to 5,000-person enterprises, Velox grows with you effortlessly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section class="vlx26-stats vlx26-animate" aria-label="Statistics">
+    <div class="vlx26-container">
+      <div class="vlx26-stats-grid">
+        <div class="vlx26-stat-item">
+          <div class="vlx26-stat-number" data-vlx26-count="9400">0</div>
+          <div class="vlx26-stat-label">Teams worldwide</div>
+        </div>
+        <div class="vlx26-stat-item">
+          <div class="vlx26-stat-number" data-vlx26-count="99.99" data-vlx26-suffix="%" data-vlx26-decimal="2">0</div>
+          <div class="vlx26-stat-label">Uptime SLA</div>
+        </div>
+        <div class="vlx26-stat-item">
+          <div class="vlx26-stat-number" data-vlx26-count="2400000" data-vlx26-display="2.4M">0</div>
+          <div class="vlx26-stat-label">Workflows automated</div>
+        </div>
+        <div class="vlx26-stat-item">
+          <div class="vlx26-stat-number" data-vlx26-count="47" data-vlx26-suffix="%" data-vlx26-prefix="+">0</div>
+          <div class="vlx26-stat-label">Avg. efficiency gain</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="vlx26-testimonials vlx26-section" id="vlx26-testimonials" aria-label="Testimonials">
+    <div class="vlx26-container">
+      <div class="vlx26-section-header vlx26-animate">
+        <div class="vlx26-section-badge">✦ Testimonials</div>
+        <h2 class="vlx26-section-title">Loved by teams everywhere</h2>
+        <p class="vlx26-section-subtitle">Don't just take our word for it. Here's what our customers have to say.</p>
+      </div>
+
+      <div class="vlx26-testimonials-grid">
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-1">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "Velox completely transformed how our engineering team operates. We cut our deployment time by 70% in the first month. Absolutely game-changing."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #6d5cff;" aria-hidden="true">SK</div>
+            <div>
+              <div class="vlx26-testimonial-name">Sarah Kim</div>
+              <div class="vlx26-testimonial-role">VP Engineering, TechFlow</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-2">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "The AI features alone are worth the price. It predicted a bottleneck in our pipeline before anyone on the team noticed it. Incredibly smart platform."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #06d6a0;" aria-hidden="true">MR</div>
+            <div>
+              <div class="vlx26-testimonial-name">Marcus Rivera</div>
+              <div class="vlx26-testimonial-role">CTO, ScaleAI Labs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-3">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "We replaced Jira, Asana, and three other tools with Velox. Our team is happier, faster, and we're saving over $8K per month. No-brainer decision."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #ff6b9d;" aria-hidden="true">EJ</div>
+            <div>
+              <div class="vlx26-testimonial-name">Emily Johnson</div>
+              <div class="vlx26-testimonial-role">Head of Product, Dropbase</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-4">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "Best-in-class integrations. We connected our entire stack in under an hour. The onboarding experience is the smoothest I've ever seen for a SaaS product."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #fbbf24;" aria-hidden="true">DL</div>
+            <div>
+              <div class="vlx26-testimonial-name">David Lee</div>
+              <div class="vlx26-testimonial-role">Dev Lead, Mintlify</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-5">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "Security was our main concern. Velox passed our audit with flying colors — SOC 2, SSO, granular permissions. Enterprise-ready from day one."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #38bdf8;" aria-hidden="true">AP</div>
+            <div>
+              <div class="vlx26-testimonial-name">Anika Patel</div>
+              <div class="vlx26-testimonial-role">CISO, FinanceOS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-testimonial-card vlx26-animate vlx26-animate-delay-6">
+          <div class="vlx26-testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="vlx26-testimonial-quote">
+            "The ROI was visible within the first week. Our team reclaimed 12+ hours per person per week. Velox pays for itself many times over."
+          </blockquote>
+          <div class="vlx26-testimonial-author">
+            <div class="vlx26-testimonial-avatar" style="background: #fb923c;" aria-hidden="true">JW</div>
+            <div>
+              <div class="vlx26-testimonial-name">James Wong</div>
+              <div class="vlx26-testimonial-role">COO, Raycast</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PRICING ======== -->
+  <section class="vlx26-pricing vlx26-section" id="vlx26-pricing" aria-label="Pricing">
+    <div class="vlx26-container">
+      <div class="vlx26-section-header vlx26-animate">
+        <div class="vlx26-section-badge">✦ Pricing</div>
+        <h2 class="vlx26-section-title">Simple, transparent pricing</h2>
+        <p class="vlx26-section-subtitle">Start free and scale as you grow. No hidden fees, no surprises.</p>
+      </div>
+
+      <div class="vlx26-pricing-toggle vlx26-animate">
+        <span class="vlx26-pricing-toggle-label vlx26-toggle-active" id="vlx26-label-monthly">Monthly</span>
+        <button class="vlx26-toggle-switch" id="vlx26-billing-toggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+          <div class="vlx26-toggle-knob"></div>
+        </button>
+        <span class="vlx26-pricing-toggle-label" id="vlx26-label-annual">Annual</span>
+        <span class="vlx26-pricing-save">Save 20%</span>
+      </div>
+
+      <div class="vlx26-pricing-grid">
+        <!-- Starter -->
+        <div class="vlx26-pricing-card vlx26-animate vlx26-animate-delay-1">
+          <div class="vlx26-pricing-name">Starter</div>
+          <div class="vlx26-pricing-desc">Perfect for small teams getting started with automation.</div>
+          <div class="vlx26-pricing-price">
+            <span class="vlx26-pricing-currency">$</span>
+            <span class="vlx26-pricing-amount" data-vlx26-monthly="19" data-vlx26-annual="15">19</span>
+            <span class="vlx26-pricing-period">/mo</span>
+          </div>
+          <div class="vlx26-pricing-billing" data-vlx26-billing-monthly="Billed monthly" data-vlx26-billing-annual="Billed annually ($180/yr)">Billed monthly</div>
+          <div class="vlx26-pricing-features">
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Up to 5 team members</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>50 automated workflows</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Basic integrations</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Community support</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Standard analytics</span>
+            </div>
+          </div>
+          <a href="#" class="vlx26-pricing-cta vlx26-pricing-cta-outline">Start free trial</a>
+        </div>
+
+        <!-- Pro (Popular) -->
+        <div class="vlx26-pricing-card vlx26-pricing-card-popular vlx26-animate vlx26-animate-delay-2">
+          <div class="vlx26-pricing-popular-badge">Most Popular</div>
+          <div class="vlx26-pricing-name">Pro</div>
+          <div class="vlx26-pricing-desc">For growing teams that need advanced features and scale.</div>
+          <div class="vlx26-pricing-price">
+            <span class="vlx26-pricing-currency">$</span>
+            <span class="vlx26-pricing-amount" data-vlx26-monthly="49" data-vlx26-annual="39">49</span>
+            <span class="vlx26-pricing-period">/mo</span>
+          </div>
+          <div class="vlx26-pricing-billing" data-vlx26-billing-monthly="Billed monthly" data-vlx26-billing-annual="Billed annually ($468/yr)">Billed monthly</div>
+          <div class="vlx26-pricing-features">
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Up to 25 team members</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Unlimited workflows</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>300+ integrations</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Priority support + Slack</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>AI-powered insights</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Advanced analytics</span>
+            </div>
+          </div>
+          <a href="#" class="vlx26-pricing-cta vlx26-pricing-cta-primary">Start free trial</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="vlx26-pricing-card vlx26-animate vlx26-animate-delay-3">
+          <div class="vlx26-pricing-name">Enterprise</div>
+          <div class="vlx26-pricing-desc">For large organizations with advanced security and compliance needs.</div>
+          <div class="vlx26-pricing-price">
+            <span class="vlx26-pricing-amount" style="font-size: 2.5rem;">Custom</span>
+          </div>
+          <div class="vlx26-pricing-billing">Tailored to your organization</div>
+          <div class="vlx26-pricing-features">
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Unlimited members</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Everything in Pro</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>SSO & SAML</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Dedicated account manager</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>Custom SLA & compliance</span>
+            </div>
+            <div class="vlx26-pricing-feature">
+              <div class="vlx26-pricing-feature-check" aria-hidden="true">✓</div>
+              <span>On-premise deployment option</span>
+            </div>
+          </div>
+          <a href="#" class="vlx26-pricing-cta vlx26-pricing-cta-outline">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section class="vlx26-faq vlx26-section" id="vlx26-faq" aria-label="Frequently asked questions">
+    <div class="vlx26-container">
+      <div class="vlx26-section-header vlx26-animate">
+        <div class="vlx26-section-badge">✦ FAQ</div>
+        <h2 class="vlx26-section-title">Frequently asked questions</h2>
+        <p class="vlx26-section-subtitle">Got questions? We've got answers. If you can't find what you're looking for, reach out to our support team.</p>
+      </div>
+
+      <div class="vlx26-faq-list">
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-1">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>How does the free trial work?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              Every plan comes with a 14-day free trial with full access to all features. No credit card required. When your trial ends, you can choose to upgrade or continue with our free tier with limited features.
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-2">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>Can I change my plan later?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              Absolutely! You can upgrade, downgrade, or cancel your plan at any time. When you upgrade, you'll be prorated for the remainder of your billing period. Downgrades take effect at the start of your next billing cycle.
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-3">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>What integrations do you support?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              We support 300+ native integrations including Slack, GitHub, Jira, Notion, Salesforce, HubSpot, Zapier, and many more. We also offer a robust API and webhooks for custom integrations with any tool in your stack.
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-4">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>Is my data secure?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              Security is our top priority. We're SOC 2 Type II certified, GDPR and CCPA compliant, and all data is encrypted at rest and in transit. We offer SSO, SAML, role-based access control, and audit logs on all plans. Enterprise customers can opt for on-premise deployment.
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-5">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>Do you offer a refund policy?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              Yes, we offer a 30-day money-back guarantee on all paid plans. If you're not completely satisfied, contact our support team within 30 days of purchase for a full refund, no questions asked.
+            </div>
+          </div>
+        </div>
+
+        <div class="vlx26-faq-item vlx26-animate vlx26-animate-delay-6">
+          <button class="vlx26-faq-trigger" aria-expanded="false">
+            <span>What kind of support do you offer?</span>
+            <span class="vlx26-faq-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="vlx26-faq-content" role="region">
+            <div class="vlx26-faq-answer">
+              Starter plans get access to our community forum and knowledge base. Pro plans include priority email support and a dedicated Slack channel. Enterprise customers receive a dedicated account manager, phone support, and custom SLA with guaranteed response times.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA SECTION ======== -->
+  <section class="vlx26-cta-section" aria-label="Call to action">
+    <div class="vlx26-cta-bg" aria-hidden="true">
+      <div class="vlx26-cta-orb vlx26-cta-orb-1"></div>
+      <div class="vlx26-cta-orb vlx26-cta-orb-2"></div>
+    </div>
+    <div class="vlx26-container">
+      <div class="vlx26-cta-content vlx26-animate">
+        <h2 class="vlx26-cta-title">Ready to accelerate<br>your workflow?</h2>
+        <p class="vlx26-cta-subtitle">Join 9,400+ teams already shipping faster with Velox. Start your free trial today — no credit card required.</p>
+        <div class="vlx26-cta-actions">
+          <a href="#vlx26-pricing" class="vlx26-btn-hero-primary">
+            Start free trial
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4"/></svg>
+          </a>
+          <a href="#" class="vlx26-btn-hero-secondary">
+            Talk to sales
+          </a>
+        </div>
+        <p class="vlx26-cta-note">Free 14-day trial · No credit card · Cancel anytime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="vlx26-footer" role="contentinfo">
+    <div class="vlx26-container">
+      <div class="vlx26-footer-grid">
+        <div class="vlx26-footer-brand">
+          <a href="#" class="vlx26-nav-logo" aria-label="Velox Home">
+            <div class="vlx26-nav-logo-icon" aria-hidden="true">V</div>
+            <span>Velox</span>
+          </a>
+          <p>Accelerate your workflow with intelligent automation. Built for teams that ship.</p>
+        </div>
+
+        <div class="vlx26-footer-column">
+          <h4>Product</h4>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Integrations</a>
+          <a href="#">Changelog</a>
+          <a href="#">API Docs</a>
+        </div>
+
+        <div class="vlx26-footer-column">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="vlx26-footer-column">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Security</a>
+          <a href="#">GDPR</a>
+        </div>
+      </div>
+
+      <div class="vlx26-footer-bottom">
+        <p class="vlx26-footer-copy">© 2026 Velox, Inc. All rights reserved.</p>
+        <div class="vlx26-footer-socials">
+          <a href="#" class="vlx26-footer-social-link" aria-label="Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="vlx26-footer-social-link" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="vlx26-footer-social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="vlx26-footer-social-link" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ============================================
+      // NAVBAR SCROLL EFFECT
+      // ============================================
+      const vlx26Nav = document.getElementById('vlx26-nav');
+      let vlx26LastScroll = 0;
+
+      function vlx26HandleNavScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 50) {
+          vlx26Nav.classList.add('vlx26-nav-scrolled');
+        } else {
+          vlx26Nav.classList.remove('vlx26-nav-scrolled');
+        }
+        vlx26LastScroll = scrollY;
+      }
+
+      window.addEventListener('scroll', vlx26HandleNavScroll, { passive: true });
+
+      // ============================================
+      // MOBILE MENU
+      // ============================================
+      const vlx26MobileBtn = document.getElementById('vlx26-mobile-btn');
+      const vlx26MobileMenu = document.getElementById('vlx26-mobile-menu');
+
+      function vlx26ToggleMobile() {
+        const isOpen = vlx26MobileMenu.classList.toggle('vlx26-mobile-open');
+        vlx26MobileBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      vlx26MobileBtn.addEventListener('click', vlx26ToggleMobile);
+
+      // Close mobile menu on link click
+      vlx26MobileMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          vlx26MobileMenu.classList.remove('vlx26-mobile-open');
+          vlx26MobileBtn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ============================================
+      // SCROLL ANIMATIONS (Intersection Observer)
+      // ============================================
+      const vlx26AnimElements = document.querySelectorAll('.vlx26-animate');
+
+      if ('IntersectionObserver' in window) {
+        const vlx26Observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('vlx26-visible');
+              vlx26Observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        vlx26AnimElements.forEach(function(el) {
+          vlx26Observer.observe(el);
+        });
+      } else {
+        // Fallback: show all
+        vlx26AnimElements.forEach(function(el) {
+          el.classList.add('vlx26-visible');
+        });
+      }
+
+      // ============================================
+      // PRICING TOGGLE
+      // ============================================
+      const vlx26BillingToggle = document.getElementById('vlx26-billing-toggle');
+      const vlx26LabelMonthly = document.getElementById('vlx26-label-monthly');
+      const vlx26LabelAnnual = document.getElementById('vlx26-label-annual');
+      let vlx26IsAnnual = false;
+
+      function vlx26UpdatePricing() {
+        const amounts = document.querySelectorAll('.vlx26-pricing-amount[data-vlx26-monthly]');
+        const billings = document.querySelectorAll('[data-vlx26-billing-monthly]');
+
+        amounts.forEach(function(el) {
+          const value = vlx26IsAnnual ? el.dataset.vlx26Annual : el.dataset.vlx26Monthly;
+          el.textContent = value;
+        });
+
+        billings.forEach(function(el) {
+          el.textContent = vlx26IsAnnual ? el.dataset.vlx26BillingAnnual : el.dataset.vlx26BillingMonthly;
+        });
+
+        if (vlx26IsAnnual) {
+          vlx26BillingToggle.classList.add('vlx26-toggle-on');
+          vlx26BillingToggle.setAttribute('aria-checked', 'true');
+          vlx26LabelAnnual.classList.add('vlx26-toggle-active');
+          vlx26LabelMonthly.classList.remove('vlx26-toggle-active');
+        } else {
+          vlx26BillingToggle.classList.remove('vlx26-toggle-on');
+          vlx26BillingToggle.setAttribute('aria-checked', 'false');
+          vlx26LabelMonthly.classList.add('vlx26-toggle-active');
+          vlx26LabelAnnual.classList.remove('vlx26-toggle-active');
+        }
+      }
+
+      vlx26BillingToggle.addEventListener('click', function() {
+        vlx26IsAnnual = !vlx26IsAnnual;
+        vlx26UpdatePricing();
+      });
+
+      vlx26BillingToggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          vlx26IsAnnual = !vlx26IsAnnual;
+          vlx26UpdatePricing();
+        }
+      });
+
+      // ============================================
+      // FAQ ACCORDION
+      // ============================================
+      const vlx26FaqItems = document.querySelectorAll('.vlx26-faq-item');
+
+      vlx26FaqItems.forEach(function(item) {
+        const trigger = item.querySelector('.vlx26-faq-trigger');
+        const content = item.querySelector('.vlx26-faq-content');
+
+        trigger.addEventListener('click', function() {
+          const isOpen = item.classList.contains('vlx26-faq-open');
+
+          // Close all others
+          vlx26FaqItems.forEach(function(other) {
+            if (other !== item) {
+              other.classList.remove('vlx26-faq-open');
+              other.querySelector('.vlx26-faq-trigger').setAttribute('aria-expanded', 'false');
+              other.querySelector('.vlx26-faq-content').style.maxHeight = '0';
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('vlx26-faq-open');
+            trigger.setAttribute('aria-expanded', 'false');
+            content.style.maxHeight = '0';
+          } else {
+            item.classList.add('vlx26-faq-open');
+            trigger.setAttribute('aria-expanded', 'true');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // ============================================
+      // COUNTER ANIMATION (Stats Section)
+      // ============================================
+      const vlx26StatNumbers = document.querySelectorAll('.vlx26-stat-number[data-vlx26-count]');
+      let vlx26StatsAnimated = false;
+
+      function vlx26AnimateCounters() {
+        if (vlx26StatsAnimated) return;
+        vlx26StatsAnimated = true;
+
+        vlx26StatNumbers.forEach(function(el) {
+          const display = el.dataset.vlx26Display;
+          const target = parseFloat(el.dataset.vlx26Count);
+          const suffix = el.dataset.vlx26Suffix || '';
+          const prefix = el.dataset.vlx26Prefix || '';
+          const decimals = parseInt(el.dataset.vlx26Decimal) || 0;
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function vlx26UpdateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            if (display) {
+              // For display values like "2.4M", animate the number part
+              const numMatch = display.match(/^([\d.]+)(.*)$/);
+              if (numMatch) {
+                const numTarget = parseFloat(numMatch[1]);
+                const unit = numMatch[2];
+                const current = (numTarget * eased).toFixed(1);
+                el.textContent = prefix + current + unit;
+              }
+            } else {
+              const current = target * eased;
+              if (decimals > 0) {
+                el.textContent = prefix + current.toFixed(decimals) + suffix;
+              } else {
+                el.textContent = prefix + Math.round(current).toLocaleString() + suffix;
+              }
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(vlx26UpdateCounter);
+            }
+          }
+
+          requestAnimationFrame(vlx26UpdateCounter);
+        });
+      }
+
+      // Trigger counter when stats section is visible
+      if ('IntersectionObserver' in window) {
+        const vlx26StatsSection = document.querySelector('.vlx26-stats');
+        if (vlx26StatsSection) {
+          const vlx26StatsObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+              vlx26AnimateCounters();
+              vlx26StatsObserver.disconnect();
+            }
+          }, { threshold: 0.3 });
+          vlx26StatsObserver.observe(vlx26StatsSection);
+        }
+      }
+
+      // ============================================
+      // SMOOTH SCROLL for nav links (fallback)
+      // ============================================
+      document.querySelectorAll('a[href^="#vlx26-"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
