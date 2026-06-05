@@ -1,14 +1,618 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>klar-site-3</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <h1>klar-site-3</h1>
-    <p>Edit this page with Klar.</p>
-  </body>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northstar — AI Revenue Operations Platform</title>
+  <meta name="description" content="Northstar is a premium SaaS platform that aligns marketing, sales, and customer success teams with predictive revenue intelligence.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container-wide header-inner">
+      <a class="brand" href="#top" aria-label="Northstar home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" role="img">
+            <path d="M12 2.25l2.56 6.72 7.19 2.53-7.19 2.53L12 20.75l-2.56-6.72-7.19-2.53 7.19-2.53L12 2.25z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-name">Northstar</span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#benefits">Benefits</a>
+        <a class="nav-link" href="#customers">Customers</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+          <svg class="theme-icon-moon" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 14.72A8.55 8.55 0 0 1 9.28 3 9.5 9.5 0 1 0 21 14.72z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <a class="btn btn-secondary header-cta" href="#pricing">View pricing</a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false" data-menu-button>
+          <span class="menu-button-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container-wide hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-pill">New</span>
+            <span>Predictive pipeline intelligence for modern SaaS teams</span>
+          </div>
+
+          <h1 class="hero-title">Turn revenue chaos into a <span class="gradient-text">clear growth system.</span></h1>
+          <p class="hero-description">
+            Northstar unifies your go-to-market data, prioritizes the accounts most likely to convert, and gives every team the next best action before momentum slips.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="btn btn-primary btn-lg" href="#pricing">
+              Start free trial
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="btn btn-secondary btn-lg" href="#features">Explore platform</a>
+          </div>
+
+          <div class="hero-metrics" aria-label="Northstar performance metrics">
+            <div class="metric">
+              <span class="metric-value">38%</span>
+              <span class="metric-label">higher qualified pipeline</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">14h</span>
+              <span class="metric-label">saved per rep weekly</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">99.98%</span>
+              <span class="metric-label">platform uptime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Northstar analytics dashboard preview">
+          <div class="dashboard-shell">
+            <div class="floating-card top">
+              <div class="floating-card-title">
+                <span class="status-dot" aria-hidden="true"></span>
+                Hot account detected
+              </div>
+              <p>Acme Cloud intent rose 72%. Suggested action: executive intro within 24 hours.</p>
+            </div>
+
+            <div class="floating-card bottom">
+              <div class="floating-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 13l4 4L20 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Forecast locked
+              </div>
+              <p>Q3 forecast confidence improved from 61% to 89% after signal enrichment.</p>
+            </div>
+
+            <div class="dashboard">
+              <div class="dashboard-topbar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="dashboard-status">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Live model
+                </div>
+              </div>
+
+              <div class="dashboard-body">
+                <div class="dashboard-panel">
+                  <span class="panel-label">Revenue velocity</span>
+                  <h2 class="panel-heading">$8.4M influenced pipeline</h2>
+                  <div class="chart" aria-hidden="true">
+                    <span class="chart-bar" style="height: 42%;"></span>
+                    <span class="chart-bar" style="height: 58%;"></span>
+                    <span class="chart-bar" style="height: 51%;"></span>
+                    <span class="chart-bar" style="height: 74%;"></span>
+                    <span class="chart-bar" style="height: 86%;"></span>
+                    <span class="chart-bar" style="height: 96%;"></span>
+                  </div>
+                </div>
+
+                <div class="insight-card">
+                  <span class="panel-label">Next best segment</span>
+                  <strong>Fintech</strong>
+                  <span>2.7x conversion lift predicted this month.</span>
+                </div>
+
+                <div class="insight-card">
+                  <span class="panel-label">Risk prevention</span>
+                  <strong>24 deals</strong>
+                  <span>Rescued by stalled-stage alerts.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="logo-strip" aria-label="Trusted companies">
+      <div class="container-wide logo-strip-inner reveal">
+        <p>Trusted by high-growth teams scaling from $10M to $500M ARR</p>
+        <ul class="logo-list" aria-label="Customer logos">
+          <li class="logo-item">Apexly</li>
+          <li class="logo-item">MercuryOps</li>
+          <li class="logo-item">VaultIQ</li>
+          <li class="logo-item">LumaGrid</li>
+          <li class="logo-item">OrbitPay</li>
+          <li class="logo-item">SignalForge</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Platform</span>
+          <h2 class="section-title">Everything your revenue team needs to move as one.</h2>
+          <p class="section-copy">
+            Replace fragmented dashboards and manual follow-up with one intelligent operating layer for pipeline creation, conversion, and expansion.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Predictive pipeline scoring</h3>
+            <p>Rank every account by fit, intent, engagement, and deal velocity so teams focus on revenue with the highest probability to close.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 3v18M5 8h14M7 16h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Signal orchestration</h3>
+            <p>Combine product usage, CRM activity, support sentiment, and third-party intent into clean workflows your teams can trust.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7 11a5 5 0 0 1 10 0v2l2 3H5l2-3v-2zm3 8h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Proactive alerts</h3>
+            <p>Surface expansion moments, buying committee changes, stalled opportunities, and churn indicators before they become missed targets.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 7h16M7 4v6m10-6v6M6 14h5v5H6zm7 0h5v5h-5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Executive forecasting</h3>
+            <p>Give leadership an accurate, explainable view of forecast confidence, commit risk, and the actions required to protect the number.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 6v6l4 2M21 12A9 9 0 1 1 3 12a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Automated next actions</h3>
+            <p>Generate prioritized plays for SDRs, AEs, CSMs, and RevOps with context-rich recommendations tied to business outcomes.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8 12h8M12 8v8M5 5h14v14H5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Enterprise-grade controls</h3>
+            <p>Protect sensitive data with role-based access, audit-ready activity history, configurable governance, and secure data retention.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container benefits-layout">
+        <div class="reveal">
+          <header class="section-header align-left">
+            <span class="section-eyebrow">Why teams switch</span>
+            <h2 class="section-title">Less admin. Sharper focus. Faster revenue.</h2>
+            <p class="section-copy">
+              Northstar turns scattered signals into a repeatable operating rhythm, helping teams spend more time on the accounts and actions that create durable growth.
+            </p>
+          </header>
+
+          <ul class="benefit-list">
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="benefit-copy">
+                <h3>Launch in days, not quarters</h3>
+                <p>Connect core systems quickly, map your lifecycle, and start surfacing useful recommendations without a heavy implementation cycle.</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M4 12h5l3-8 3 16 3-8h2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="benefit-copy">
+                <h3>See risk while it is still fixable</h3>
+                <p>Identify account drift, stalled champions, low engagement, and forecast gaps before they impact renewal or expansion plans.</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M12 20V10M18 20V4M6 20v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="benefit-copy">
+                <h3>Coach every rep with data</h3>
+                <p>Give managers clear inspection paths and give reps precise guidance based on what actually advances deals.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="workflow-card reveal" aria-label="Northstar workflow summary">
+          <h3>One GTM command center.</h3>
+          <p>From first signal to expansion motion, Northstar keeps every stakeholder aligned on what matters now.</p>
+          <div class="workflow-steps">
+            <div class="workflow-step">
+              <span class="workflow-step-number">1</span>
+              <strong>Ingest every signal</strong>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-step-number">2</span>
+              <strong>Model revenue impact</strong>
+            </div>
+            <div class="workflow-step">
+              <span class="workflow-step-number">3</span>
+              <strong>Activate the right play</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="customers">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Social proof</span>
+          <h2 class="section-title">Revenue leaders use Northstar to build predictable growth.</h2>
+          <p class="section-copy">
+            Teams choose Northstar when spreadsheets, point tools, and guesswork no longer match the speed of their market.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="Five out of five stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+            </div>
+            <blockquote>“Northstar became the operating system for our pipeline reviews. We finally know which deals need attention before the quarter is at risk.”</blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true">MK</div>
+              <div>
+                <span class="author-name">Maya Kim</span>
+                <span class="author-role">VP Revenue, LumaGrid</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card featured reveal">
+            <div class="stars" aria-label="Five out of five stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+            </div>
+            <blockquote>“We replaced five disconnected reports with one trusted view. Our reps act faster, our managers coach better, and our forecast calls are calmer.”</blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true">AR</div>
+              <div>
+                <span class="author-name">Andre Reeves</span>
+                <span class="author-role">Chief Revenue Officer, OrbitPay</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="Five out of five stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.15 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9L12 2.8z" fill="currentColor"/></svg>
+            </div>
+            <blockquote>“The quality of account recommendations surprised our team. Within one month, we uncovered expansion opportunities we would have missed.”</blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" aria-hidden="true">SL</div>
+              <div>
+                <span class="author-name">Sophia Liu</span>
+                <span class="author-role">Director of RevOps, VaultIQ</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Pricing</span>
+          <h2 class="section-title">Scale revenue intelligence without surprise costs.</h2>
+          <p class="section-copy">
+            Start with the plan that matches your GTM motion. Upgrade when your team is ready for deeper controls, custom modeling, and strategic support.
+          </p>
+        </header>
+
+        <div class="pricing-toggle reveal" aria-label="Billing frequency">
+          <button class="billing-button" type="button" aria-pressed="true" data-billing="monthly">Monthly</button>
+          <button class="billing-button" type="button" aria-pressed="false" data-billing="yearly">Yearly <span class="text-muted">save 20%</span></button>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <h3>Launch</h3>
+            <p>For early revenue teams centralizing signals and improving account focus.</p>
+            <div class="price" aria-label="Launch plan price">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="49" data-yearly="39">49</span>
+              <span class="price-period">per seat/mo</span>
+            </div>
+            <a class="btn btn-secondary" href="#faq">Start Launch</a>
+            <ul class="pricing-features">
+              <li><span class="check-icon" aria-hidden="true">✓</span>CRM and product data sync</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Account scoring templates</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Weekly pipeline digest</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Email support</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card popular reveal">
+            <span class="pricing-badge">Most popular</span>
+            <h3>Scale</h3>
+            <p>For growing SaaS companies coordinating sales, marketing, and success.</p>
+            <div class="price" aria-label="Scale plan price">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="89" data-yearly="71">89</span>
+              <span class="price-period">per seat/mo</span>
+            </div>
+            <a class="btn btn-primary" href="#faq">Start free trial</a>
+            <ul class="pricing-features">
+              <li><span class="check-icon" aria-hidden="true">✓</span>Everything in Launch</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Predictive opportunity scoring</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Automated play recommendations</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Forecast risk dashboard</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Priority support</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card reveal">
+            <h3>Enterprise</h3>
+            <p>For complex GTM organizations needing custom models and governance.</p>
+            <div class="price" aria-label="Enterprise plan custom pricing">
+              <span class="price-amount" data-monthly="Custom" data-yearly="Custom">Custom</span>
+            </div>
+            <a class="btn btn-secondary" href="#faq">Talk to sales</a>
+            <ul class="pricing-features">
+              <li><span class="check-icon" aria-hidden="true">✓</span>Everything in Scale</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Custom AI revenue models</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Advanced permissions and audit logs</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Dedicated success architect</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span>Security and procurement support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-layout">
+        <header class="section-header align-left reveal">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="section-title">Questions before you switch?</h2>
+          <p class="section-copy">
+            Northstar is built for fast-moving teams that need enterprise-grade trust without enterprise-grade friction.
+          </p>
+        </header>
+
+        <div class="faq-list reveal">
+          <article class="faq-item is-open">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+                How quickly can we launch Northstar?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-1">
+              <div class="faq-answer-inner">
+                <p>Most teams connect their core systems and receive first recommendations within one week. Larger enterprise rollouts typically launch in phases over two to four weeks.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                Does Northstar replace our CRM?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-2">
+              <div class="faq-answer-inner">
+                <p>No. Northstar works alongside your CRM as an intelligence layer. It enriches your existing data, identifies revenue signals, and helps teams take better action inside their current workflow.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                Is our customer data secure?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-3">
+              <div class="faq-answer-inner">
+                <p>Yes. Northstar uses encryption in transit and at rest, role-based access controls, audit logging, and data retention options designed for modern B2B SaaS security standards.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                What teams benefit most?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-4">
+              <div class="faq-answer-inner">
+                <p>Revenue leadership, RevOps, sales, marketing, and customer success all use Northstar to coordinate around target accounts, pipeline risk, expansion opportunities, and forecast confidence.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                Can we customize scoring and recommendations?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-5">
+              <div class="faq-answer-inner">
+                <p>Absolutely. Launch and Scale plans include configurable templates. Enterprise customers can work with our team on custom models, advanced lifecycle rules, and governance workflows.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container-wide">
+        <div class="cta-card reveal">
+          <div>
+            <h2 id="cta-title">Ready to make every revenue signal count?</h2>
+            <p>Start your free trial today and see where your team can create more pipeline, protect more deals, and grow with confidence.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="#pricing">Start free trial</a>
+            <a class="btn btn-secondary btn-lg" href="#features">See features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container-wide">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Northstar home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" role="img">
+                <path d="M12 2.25l2.56 6.72 7.19 2.53-7.19 2.53L12 20.75l-2.56-6.72-7.19-2.53 7.19-2.53L12 2.25z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-name">Northstar</span>
+          </a>
+          <p>The AI revenue operations platform for teams that want clarity, speed, and predictable growth.</p>
+        </div>
+
+        <div class="footer-columns">
+          <div>
+            <h2 class="footer-title">Platform</h2>
+            <ul class="footer-links">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-title">Customers</h2>
+            <ul class="footer-links">
+              <li><a href="#customers">Testimonials</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#top">Get started</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-title">Company</h2>
+            <ul class="footer-links">
+              <li><a href="#top">About</a></li>
+              <li><a href="#features">Security</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-title">Resources</h2>
+            <ul class="footer-links">
+              <li><a href="#benefits">Revenue guide</a></li>
+              <li><a href="#customers">Case studies</a></li>
+              <li><a href="#faq">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Northstar Labs. All rights reserved.</p>
+        <div class="footer-bottom-links" aria-label="Legal links">
+          <a href="#footer">Privacy</a>
+          <a href="#footer">Terms</a>
+          <a href="#footer">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
 </html>
